@@ -1,0 +1,9 @@
+👉 JavaScript Assignment 1
+
+Question 1: Write a JavasScript Program to print "hello JavaScript" on document (browser screen).
+
+Question 2: Write a JavaScript Program to Print "Hello JavaScript" through an alert box adding Script tag within body tag.
+
+Question 3: Write a JavaScript Program to Print "Hello JavaScript" through an alert box adding Script tag within head tag.
+
+Question 4: Write a JavaScript Program to Print "Hello JavaScript" through an alert box by adding an external JavaScript file.
