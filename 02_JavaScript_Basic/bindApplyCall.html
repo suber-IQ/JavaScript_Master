@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript - bind() vs apply() and call()</title>
+</head>
+<body>
+<h3>bind() vs apply() and call() </h3>
+
+<script type="text/javascript">
+
+// 👉  Example 1 of apply()
+
+    //  var arr = [8,6,4,3];
+
+    // //  var max = Math.max.apply(this,arr)
+    //  var max = Math.max.apply(null,arr)
+    //  var min = Math.min.apply(null,arr)
+
+    //  document.writeln("Array value are: ")
+    //  for(value of arr){
+    //     document.writeln(value)
+    //  }
+
+    //  document.write("<br>")
+    //  document.writeln("Maximum number is: " + max)
+    //  document.write("<br>")
+    //  document.writeln("Minimum number is:  " + min)
+
+// 👉  Example 2 of apply()
+
+// var array = [1,2,3,4];
+// var newarray = [5,6,7,8];
+
+// array.push.apply(array,newarray);
+// document.writeln(array);
+
+// 👉  Example 1 of bind()
+
+// var website = {
+//     name: "SuberIQ",
+//     getName: function(){
+//         return this.name;
+//     }
+// }
+// var website2 = {
+//     name: "Google",
+    // getName: function(){
+    //     return this.name;
+    // }
+// }
+// var website3 = {
+//     firstName: "Humgama",
+
+// }
+// var website4 = {
+    // name: "Hello",
+
+// }
+
+// var unboundGetName = website.getName;
+// var boundGetName = unboundGetName.bind(website1)
+// var boundGetName = unboundGetName.bind(website2)
+// var boundGetName = unboundGetName.bind(website3)
+// var boundGetName = unboundGetName.bind(website4)
+
+// document.write(website.getName())
+// document.write(unboundGetName)
+// document.write(boundGetName)
+// document.write(boundGetName())
+
+// 👉  Example 1 of toString()
+
+function add(num1,num2){
+    return num1 + num2;
+}
+
+// document.writeln(add().toString());
+document.writeln(add(10,20).toString());
+document.write("<br/>");
+document.writeln(typeof add.toString());
+
+</script>
+</body>
+</html>

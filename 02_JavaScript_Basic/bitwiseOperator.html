@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>JavaScript - Bitwise</title>
+</head>
+<body>
+
+      <!-- 👉 AND in binary -->
+       <!-- 0 & 0 => 0 -->
+       <!-- 0 & 1 => 0 -->
+       <!-- 1 & 0 => 0 -->
+       <!-- 1 & 1 => 1 -->
+
+      <!-- 👉 OR in binary -->
+       <!-- 0 | 0 => 0 -->
+       <!-- 0 | 1 => 1 -->
+       <!-- 1 | 0 => 1 -->
+       <!-- 1 | 1 => 1 -->
+
+      <!-- 👉 NOT in binary -->
+       <!--  ~0 => 1 -->
+       <!--  ~1 => 0 -->
+
+      <!-- 👉 XOR in binary -->
+       <!-- 0 ^ 0 => 0 -->
+       <!-- 0 ^ 1 => 1 -->
+       <!-- 1 ^ 0 => 1 -->
+       <!-- 1 ^ 1 => 0 -->
+
+       <h3>Bitwise Operator</h3>
+
+       <script type="text/javascript">
+            // 👉  AND in binary
+
+                  var x = 5;
+                  var y = 9;
+                  // var z = 2;
+                  // var z = 3;
+                  var z = 5;
+
+                  document.write("bitwise x & y:- " + (x & y))
+                  document.write("<br>");
+
+                  document.write("bitwise x | y:- " + (x | y))
+                  document.write("<br>");
+
+                  document.write("bitwise x ^ y:- " + (x ^ y))
+                  document.write("<br>");
+
+                  document.write("bitwise ~x:- " + (~x))
+                  document.write("<br>");
+
+                  document.write("bitwise ~y:- " + (~y))
+                  document.write("<br>");
+
+                  document.write("bitwise ~z:- " + (~z))
+                  document.write("<br>");
+
+                  // 👉 Formula of left Shift(<<):- x * (2^z)
+                  document.write("bitwise left shift x << z:- " + (x<<z))
+                  document.write("<br>");
+
+                  // 👉 Formula of right Shift(>>):- x / (2^z)
+                  document.write("bitwise right shift x >> z:- " + (x>>z))
+                  document.write("<br>");
+
+                  // 👉 Formula of right Shift with zero(>>>):- x / (2^z)
+                  document.write("bitwise right shift with 0 x >>> z:- " + (x>>>z))
+                  document.write("<br>");
+
+
+
+
+
+
+       </script>
+
+
+</body>
+</html>

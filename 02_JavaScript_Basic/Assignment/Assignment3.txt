@@ -1,0 +1,15 @@
+Question1: Write a JavaScript Program which has a variable with value "true/false".
+Write a if condition which prints "Value of (variable name) is true" if the value of the variable is true else "Value of (variable name) is false" if the value is false.
+
+
+Question2: Write a JavaScript Program which prints todays day  using if..else..of statement.
+
+Question3: Write a JavaScript Program which prints todays day using switch statement.
+
+Question4: Write a JavaScript Program that has stored weekdays in an Array. Display the weekdays name using for/while/do...while and for...of loop. Make sure to add appropriate comments before each of the loop used.
+
+Question5: Write a JavaScript Program to alert "Your name" using a function named "displayName".
+
+Question6: Write a JavaScript program to find the maximum number out of the given array of numbers using apply() method.
+
+Question7: Write a JavaScript program that displays your name using a function "getNamej" that resides within an object "person". Bind this function to a new variable named "showName" and display your name using "showName" method.

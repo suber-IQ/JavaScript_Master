@@ -1,0 +1,26 @@
+Question1: Write a JavaScript Program to print "Hello SuberIq"through an alert box and add appropriate single line/multiline comment which provides description about the alert box.
+
+Question2: Write a JavaScript Program and follow steps mentioned below:
+1. Create a global variable "x".
+2. Store any numeric value to x and print.
+3. After printing the value, store any string value to x and print.
+4. After printing the value, store any boolean value to x and print.
+
+
+Question3: Write a JavaScript Program and create an array of fruits that consists of minimum 5 fruits that you like, Alert all the fruit values stored in the array.
+
+
+Question4: Write a JavaScript Program and create an object that has below mentioned properties, store values to the properties.
+1. firstName
+2. lastName
+3. age
+once you store the values to the object properties, print statement using the object and the properties.
+"The person (full name from the object) having age (age from the object) is a kind hearted one."
+
+
+Question5: Write a JavaScript program and perform below mentioed operations:
+1. Store two numeric values in variable x and y.
+2. console addition of x and y.
+3. change value of x to numeric 8 and y to string "8" and check using "==" and "===" operators.
+4. check type of x and y through console.
+5. if x or y are true, console statement "Welcome to LearnVern"

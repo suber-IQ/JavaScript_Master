@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript - for/in/of Statement</title>
+</head>
+<body>
+<h3>JavaScript for/in/of Statement</h3>
+
+<script type="text/javascript">
+//   👉 for...in Loop on object only(recommended)
+
+// var temp = ""
+
+// var person = {
+//     firstName: "Sumit",
+//     lastName: "Kumar",
+//     age: 20
+// }
+
+// for(value in person){
+    // document.writeln(value); // person property get
+    // document.writeln(person[value]); //person value get
+    // temp = temp + person[value] + " ";
+// }
+// document.write(temp);
+
+// 👉 Another example with array(not recommended)
+// However, it's generally not recommended to use for...in loop with arrays because it can iterate over all enumerable properties, not just array elements. Instead, you should use for...of loop for arrays.
+
+// document.write("<br>")
+// var name = ["sumit","Amit","suresh"];
+
+// for(value in name){
+//     // document.writeln(value) // get name index(0 1 2)
+//     document.write(name[value]); //get name value(sumit,Amit,suresh)
+// }
+
+//   👉 for...of Loop use(Array,String)
+
+// 👉 with Array
+// var alphabet = ["A","B","C","D","E","F"]
+
+
+
+// for(value of alphabet){
+//     document.writeln(value)
+// }
+
+// document.write("<br>")
+
+// for(var i = 0; i < alphabet.length; ++i){
+//        document.writeln(alphabet[i]);
+// }
+// 👉 with String
+
+var s = "SuberIQ"
+
+for(value of s){
+    document.writeln(value + "<br>")
+}
+
+
+
+
+</script>
+</body>
+</html>

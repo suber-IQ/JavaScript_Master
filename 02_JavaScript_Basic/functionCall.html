@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript - Function call()</title>
+</head>
+<body>
+
+    <h3>Function call()</h3>
+
+
+    <script type="text/javascript">
+// 🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠
+// 👉 Example 1
+        //  var add = new Function("num1","num2","return num1 + num2");
+        //  document.write(add(2,8))
+        //  document.write("<br>")
+        //  document.write(add(10,10))
+// 🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠
+// 👉 Example 2
+
+// var power = new Function("num1", "num2", "return Math.pow(num1,num2)")
+
+// document.writeln(power(2,3)) // 🎉 output:- 8 (2^3=> 2*2*2)
+// document.writeln(power(5,2)) // 🎉 output:- 25 (5^2=> 5*5)
+
+// 🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠
+// 👉 JavaScript Function Method(call(),apply(),bind(),toString())
+
+function Emp(id,name){
+    this.id = id;
+    this.name = name;
+}
+
+function PermanentEmp(id,name){
+    Emp.call(this,id,name)
+}
+function TemporaryEmp(id,name){
+    Emp.call(this,id,name)
+}
+
+
+
+var pEmp = new PermanentEmp(1,"Sumit kumar")
+var tEmp = new TemporaryEmp(2,"Krishna kumar")
+document.writeln("PermanentEmp: " + pEmp.id + " " + pEmp.name)
+document.write("<br/>")
+document.writeln("TemporaryEmp: " + tEmp.id + " " + tEmp.name)
+
+
+
+
+
+
+
+
+
+    </script>
+</body>
+</html>

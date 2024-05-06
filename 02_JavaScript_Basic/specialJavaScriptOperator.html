@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Special JavaScript Operators</title>
+</head>
+<body>
+
+<h3>Special JavaScript Operators</h3>
+
+
+<script type="text/javascript">
+    // 👉  Conditional Operator (?:)
+    //   var x = 10;
+    //   var y = 20;
+
+    // (x == y) ? document.write("yes") : document.write("no");
+    // document.write("<br>");
+    // (x != y) ? document.write("yes") : document.write("no");
+    // document.write("<br>");
+
+// 🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠
+    // 👉  Comma Operator(,)
+
+    // let a = (1,2,3);
+
+    // document.write("value of a: " + a);
+    // a += 5;
+    // document.write("<br>");
+
+    // document.write("value of a: " + a);
+
+// 🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠
+    // 👉 delete
+
+//    var person = {
+//     firstName: "Sumit",
+//     lastName: "Kumar",
+//     age: 20,
+//     eyeColor: "sky"
+//    }
+
+// delete person.lastName;
+// document.write("Delete LastName from the person object: " + person.lastName)
+// document.write("<br>");
+// document.write(" Check FirstName from the person object: " + person.firstName)
+
+// 🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠
+    // 👉 in (in property checks if the given property exist in the object)
+
+//     var person = {
+//     firstName: "Sumit",
+//     lastName: "Kumar",
+//     age: 20,
+//     eyeColor: "sky"
+//    }
+
+// var z = 'age' in person; // 🎉 output:- true
+
+// document.write("if age exists in person object: " + z)   // 🎉 output:- true
+
+// 🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠
+    // 👉 instanceof (checks if the object is an instance of given type)
+
+//         var person = {
+//     firstName: "Sumit",
+//     lastName: "Kumar",
+//     age: 20,
+//     eyeColor: "sky"
+//    }
+
+//    document.write("checks if the person object is an instance of given type: " + (person instanceof Array))
+// document.write("<br>")
+
+
+// //    👉 Another example:-
+// // Define a constructor function
+// function Person(name, age) {
+//     this.name = name;
+//     this.age = age;
+// }
+
+// // Create an object using the constructor function
+// var person1 = new Person('John', 30);
+
+// // Check if the object is an instance of the Person class
+//  document.writeln("person1 is instance of person of constructor function: " +( person1 instanceof Person)); // Output: true
+
+
+ // 🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠
+    // 👉 new (creates a new object )
+
+//     class Abc{}
+
+// var a = new Abc();
+
+// document.write(a instanceof Abc); // additional checking
+
+ // 🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠
+    // 👉 typeof (checks the type of object)
+//    var k = true;
+//     class Abc{}
+
+//     var a = new Abc()
+
+//     document.write(typeof(a))
+//     document.write("<br>")
+//     document.writeln(typeof k)
+
+// function abc(){
+// }
+// let person = {
+//     name: "sumit"
+// }
+// document.write(typeof abc)
+// document.write("<br/>")
+// document.write(typeof person)
+
+ // 🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠
+    // 👉 void (it discards the expression return value)
+
+    // javascript: void func();
+    //    javascript: void(alert('hello, world!'));
+    // var x = 10;
+
+    // var result = void(x)
+    // document.write(result)
+
+
+
+
+</script>
+
+
+
+</body>
+</html>
