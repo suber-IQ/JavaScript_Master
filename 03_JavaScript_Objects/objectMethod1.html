@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript - Object Method Part 1</title>
+</head>
+<body>
+<h3>JavaScript Object Method Part 1</h3>
+
+<script type="text/javascript">
+//    👉 object.assign() method
+
+// document.writeln("<h3>Object.assign() Method: </h3>")
+// var object1 = {
+//     a:1,
+//     b:2,
+//     c:3,
+// }
+// const object2 = {
+//     d:1,
+//     e:2,
+//     f:3
+// }
+
+// const object3 = Object.assign({c:5,d:6},object1);
+// const object4 = Object.assign({g:85,h:100},object2);
+// console.log(object1,object3);
+// console.log(object2,object4);
+
+// 🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠
+//    👉 object.create() method
+
+document.writeln("<h3>Object.create() Method: </h3>")
+
+function fruit(){
+    this.name = "Grapes";
+}
+
+function fun(){
+    fruit.call(this)
+}
+fun.prototype = Object.create(fruit.prototype)
+
+const app = new fun();
+console.log(app);
+
+// 👉 Another example 2:
+// Define a prototype object
+const personPrototype = {
+    fullName: function() {
+        return this.firstName + " " + this.lastName;
+    }
+};
+
+// Create objects using Object.create() with personPrototype as the prototype
+const person1 = Object.create(personPrototype);
+person1.firstName = "John";
+person1.lastName = "Doe";
+
+const person2 = Object.create(personPrototype);
+person2.firstName = "Jane";
+person2.lastName = "Smith";
+
+// Access properties and methods of the objects
+console.log(person1.fullName()); // Output: "John Doe"
+console.log(person2.fullName()); // Output: "Jane Smith"
+
+
+</script>
+</body>
+</html>

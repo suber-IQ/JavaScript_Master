@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Object Method Part 2</title>
+</head>
+<body>
+    <h3>JavaScript Object Methods Part 2</h3>
+<script type="text/javascript">
+  // 🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠
+//    👉 Object.freeze() and Object.isFrozen() method
+// document.writeln("<h3>Object.freeze() and Object.isFrozen() method</h3>")
+// const object1 = {
+//     age: 20
+// }
+
+// const object2 = Object.freeze(object1)
+// object2.age = 35;
+
+// console.log(object2.age);
+// console.log(Object.isFrozen()) //output: true
+
+
+ // 🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠
+//    👉 Object.is() method
+// document.writeln("<h3>Object.is() method</h3>")
+
+// const object1 = {
+//   age: 20
+// }
+// const object2 = {
+//   age: 20
+// }
+
+// console.log(Object.is(object1)) //output: false
+// console.log(Object.is(object1,object1)) //output: true
+// console.log(Object.is(object1,object2)) //output: false
+// 🎄 Note:- The Object.is() method returns false because it compares the objects by reference, not by their contents.
+// console.log(Object.is(object1.age,object2.age)) //output: true
+
+ // 🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠
+//    👉 Object.isExtensible() method
+
+// document.writeln("<h3>Object.isExtensible() method</h3>")
+
+
+// const object1 = {
+
+// }
+
+// console.log(Object.is(object1)) //output: false
+// console.log(Object.isExtensible(object1)) //output: true
+
+
+ // 🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠
+//    👉 Object.isSealed() and Object.seal()  method
+
+// document.writeln("<h3>Object.isSealed() and Object.seal() method</h3>")
+
+// const object1 = {
+//     name: "abc"
+// }
+// const object2 = Object.seal(object1);
+// object2.name = "def";
+// console.log(object2.name);
+// delete object2.name;
+// console.log(object2.name);
+// console.log(Object.isSealed(object2)); //output: true
+// console.log(Object.isSealed(object1)); //output: true
+
+
+// 🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠
+//    👉 Object.values()  method
+
+document.writeln("<h3>Object.values() method</h3>")
+
+const object1 = {
+    a: "abc",
+    b: 23,
+    c: true
+}
+
+console.log(Object.values(object1))
+
+
+
+
+
+
+
+</script>
+</body>
+</html>

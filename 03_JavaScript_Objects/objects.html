@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript - Objects</title>
+</head>
+<body>
+<h3>JavaScript Objects</h3>
+
+<script type="text/javascript">
+// 👉 Object literals with create object
+// document.writeln("<h3>Creating Object in JavaScript</h3>");
+//    var person = {
+//       firstName: "Sumit",
+//       lastName: "Kumar",
+//       age: "20",
+//       eyeColor: "blue",
+//       fullName: function(){
+//         return this.firstName + " " + this.lastName;
+//       }
+//    }
+//    document.write("Object details of Person: " + person.firstName + " " + person.lastName + " " + person.age + " " + person.eyeColor)
+//    document.write("<br>");
+//    document.write("Full Name of Person: " + person.fullName())
+
+// 🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠
+// 👉 Creating instance of Object
+// document.writeln("<h3>Creating instance of Object</h3>");
+
+// var emp = new Object();
+// emp.id = 1;
+// emp.name = "Sumit";
+// emp.salary = 20000
+
+// document.writeln("Object details of Person: ")
+// for(value in emp){
+//     document.writeln(emp[value] + " ")
+// }
+
+// 🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠
+// 👉 By using an Object constructor
+// document.writeln("<h3>Creating Object by an Object constructor</h3>");
+
+// function employee(id, name, salary){
+//     this.id = id;
+//     this.name = name;
+//     this.salary = salary;
+// }
+
+// var e = new employee(2,"Sumit kumar",50000);
+
+// document.writeln("Object details of employee object: ")
+
+// for(value in e){
+//     document.writeln(e[value] + " ")
+// }
+
+// 🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠
+// 👉 Object Method creating
+document.writeln("<h3>Creating object method </h3>")
+
+function employee(id, name, salary){
+    this.id = id;
+    this.name = name;
+    this.salary = salary;
+
+    this.updateSalary = updateSalary;
+    function updateSalary(newSalary){
+       this.salary = newSalary;
+    }
+}
+
+var e = new employee(2,"Sumit kumar",50000);
+
+document.writeln("Salary of " + e.name + " is: " + e.salary);
+
+e.updateSalary(60000)
+document.writeln("<br>")
+document.writeln("Updated Salary of " + e.name + " is: " + e.salary);
+
+
+</script>
+</body>
+</html>

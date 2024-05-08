@@ -1255,3 +1255,5 @@ document.write("<br/>");
 document.writeln(typeof add.toString());
 
 ```
+
+## 🎏 JavaScript Objects
