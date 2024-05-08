@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Array Methods Part 3</title>
+</head>
+<body>
+<h3>JavaScript Array Methods Part 3</h3>
+
+<script type="text/javascript">
+// 🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠
+    //   👉 includes() Method
+//     document.writeln("<h3>Array includes() Method: </h3>");
+
+// var arr1 = ["C","C++","Java","HTML"];
+
+// // document.writeln("Includes(): " + arr1.includes("Java"))
+// console.log("Includes(): " + arr1.includes("Java"))
+
+// 🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠
+    //   👉 indexOf() Method
+    // document.writeln("<h3>Array indexOf() Method: </h3>");
+
+// var arr1 = ["C","C++","Java","HTML","Java"];
+
+// console.log(arr1.indexOf("Java"))  // output: 2
+// console.log(arr1.indexOf("Java",3))  // output: 4
+// console.log(arr1.indexOf("React"))  // output: -1 (do not exit)
+
+// 🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠
+    //   👉 isArray() Method
+    // document.writeln("<h3>Array isArray() Method: </h3>");
+
+// var arr1 = ["C","C++","Java","HTML","Java"];
+
+// console.log(Array.isArray(1,4,7,8)) // output: false
+// console.log(Array.isArray(arr1)) // output: true
+
+// 🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠
+    //   👉 join() Method
+    // document.writeln("<h3>Array join() Method: </h3>");
+// var arr1 = ["C","C++","Java","HTML","Java"];
+
+
+//    document.writeln("arr1 after join(): " + arr1.join())
+//    document.writeln("arr1 after join(): " + arr1.join(" "))
+//    document.writeln("arr1 after join(): " + arr1.join("%"))
+//    document.writeln("arr1 after join(): " + arr1.join("$"))
+//    document.writeln("arr1 after join(): " + arr1.join("-"))
+
+
+// 🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠
+    //   👉 keys() Method
+    // document.writeln("<h3>Array keys() Method: </h3>");
+// var arr1 = ["C","C++","Java","HTML","Java"];
+// var keyArray = arr1.keys()
+
+// for(k of keyArray){
+//     // document.writeln(k);
+//     document.writeln(arr1[k]);
+// }
+
+// 🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠
+    //   👉 lastIndexOf() Method
+//     document.writeln("<h3>Array lastIndexOf() Method: </h3>");
+
+// var arr1 = ["C","C++","Java","HTML","Java"];
+
+// console.log(arr1.lastIndexOf("Java")); // output: 4
+
+
+// 🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠
+    //   👉 map() Method
+    document.writeln("<h3>Array map() Method: </h3>");
+
+var arr1 = ["C","C++","Java","HTML","Java"];
+var arr2 = [20,30,40,50,60];
+
+arr1.map(function (ele){
+    console.log(ele);
+})
+
+var mapArray = arr2.map(x => x /5)
+console.log((mapArray));
+
+
+
+
+
+
+
+</script>
+</body>
+</html>
