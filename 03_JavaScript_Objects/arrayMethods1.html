@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript - Array Methods Part 1</title>
+</head>
+<body>
+<h3>JavaScript - Array Methods Part 1</h3>
+<h4>concat(),copyWithin(),entries(),every(),flat() And flatMap()</h4>
+
+<script type="text/javascript">
+    //   👉 concat() Method
+    // document.writeln("<h3>Array concat() Method: </h3>");
+
+    // var arr1 = ["C","C++","Java"]
+    // var arr2 = ["HTML","JavaScript","Swift"]
+
+    // var concatenatedArray = arr1.concat(arr2);
+    // console.log(concatenatedArray);
+    // document.writeln(concatenatedArray);
+
+    // 🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠
+    //   👉 copywithin() Method
+//     document.writeln("<h3>Array copyWithin() Method: </h3>");
+
+//   var arr1 = ["C","C++","Java"]
+//     var arr2 = ["HTML","JavaScript","Swift"]
+
+//     var copyWithinArray = arr2.copyWithin(0,1,2)
+//     console.log(copyWithinArray);
+//     console.log(arr2)
+
+        // 🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠
+    //   👉 entries() Method
+//     document.writeln("<h3>Array entries() Method: </h3>");
+
+
+//   var arr1 = ["C","C++","Java"]
+//     var arr2 = ["HTML","JavaScript","Swift","Python"]
+
+//     var entriesArray = arr2.entries();
+//     for(value of entriesArray){
+//         // console.log(value + " ")
+//         document.write(value + " " + "<br/>");
+//     }
+
+// 🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠
+    //   👉 every() Method (return boolean)
+    // document.writeln("<h3>Array every() Method: </h3>");
+
+    // var arr3 = [50,31,40,59,20];
+
+    // function check(value){
+    //     // return value > 30; //output: false
+    //     return value >= 20; //output: true
+    // }
+
+    // console.log(arr3.every(check));
+
+    // 👉 Example 2:
+    // Example array of numbers
+// const numbers = [1, 2, 3, 4, 5];
+
+// Check if all numbers are even
+// const allEven = numbers.every(function(num) {
+    // return num % 2 === 0;
+// });
+
+// console.log(allEven); // Output: false, not all numbers are even
+
+    // 👉 Example 3:
+
+// Example array of strings
+// const fruits = ["apple", "banana", "cherry"];
+
+// Check if all strings have length greater than 3
+// const allLong = fruits.every(function(fruit) {
+//     return fruit.length > 3;
+// });
+
+// console.log(allLong); // Output: true, all strings have length greater than 3
+
+
+// 🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠
+    //   👉 flat() Method
+    // document.writeln("<h3>Array flat() Method: </h3>");
+
+    // var arr1 = [11,12,[13,14]];
+
+    // var flatArray = arr1.flat();
+    // console.log(flatArray);
+    // console.log(arr1.flat())
+// 👉 Example 2:
+// const nestedArray = [1, 2, [3, 4], [5, [6, 7]]];
+// const flattendedArray = nestedArray.flat();
+// document.writeln(flattendedArray);
+// console.log(flattendedArray);
+
+
+// 🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠
+    //   👉 flatMap() Method
+    document.writeln("<h3>Array flatMap() Method: </h3>");
+
+
+    // 👉 Example 1:
+    // Example array
+// const array = [1, 2, 3];
+
+// // Using flatMap() to double each element and flatten the result
+// const doubledAndFlattened = array.flatMap(function(num) {
+//     return [num * 2];
+// });
+
+// console.log(doubledAndFlattened); // Output: [2, 4, 6]
+
+    // 👉 Example 2:
+
+// const nestedArray = [1, 2, [3, 4], [5, [6, 7]]];
+
+// function flatten(num){
+//     return num * 2;
+// }
+
+// const firstFlat = nestedArray.flat().flat();
+// // const secondFlat = firstFlat.flat();
+// const doubledAndFlattened = firstFlat.flatMap(flatten);
+// const doubledAndFlattened = secondFlat.flatMap(flatten);
+// console.log(doubledAndFlattened);
+
+
+
+
+
+
+</script>
+</body>
+</html>
