@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript - Math Object Part 1</title>
+    <style>
+        h3{
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+<h3>JavaScript Math Object Part 1</h3>
+<script type="text/javascript">
+
+// 👉 abs() it returns the absolute value of the given number.
+
+var num1 = -4;
+document.writeln("<br>abs() of " + num1 + " : " + Math.abs(num1))  // output:- 4
+document.writeln("<br>abs() of 0: " + Math.abs(0)) // output:- 0
+document.writeln("<br>abs() of 4: " + Math.abs(4)) // output:-4
+document.writeln("<br>abs() of []: " + Math.abs([])) // output:-0
+document.writeln("<br>abs() of [2,7]: " + Math.abs([2,7])) // output:- NaN
+document.writeln("<br>abs() of null: " + Math.abs(null)) // output:- 0
+document.writeln("<br>abs() of empty: " + Math.abs()) // output:- NaN
+
+// 👉 ceil() : it returns a smallest integer value, greater than or equal to the given number.
+
+document.writeln("<br/> ceil of 4.2: " + Math.ceil(4.2)) //output:- 5
+document.writeln("<br/> ceil of 7.8: " + Math.ceil(7.8)) //output:- 8
+document.writeln("<br/> ceil of 5: " + Math.ceil(5)) //output:- 5
+document.writeln("<br/> ceil of -4.2: " + Math.ceil(-4.2)) //output:- -4
+
+// 👉 exp() (e = 2.718(formula:- 2.718^x)) : It return the exponential from of the given number.
+
+document.writeln("<br/> exp() of 1: " + Math.exp(1)) //output:- 2.718281828459045
+document.writeln("<br/> exp() of 2: " + Math.exp(2)) //output:- 7.38905609893065
+// document.writeln("<br/> exp() of 2: " + Math.ceil(Math.exp(2))) //output:- 8
+
+
+// 👉 floor() :- It returns largest integer value, lower than or equal to the given number.
+
+document.writeln("<br/> ceil of 5.3: " + Math.floor(5.3)) //output:- 5
+document.writeln("<br/> ceil of 7.8: " + Math.floor(7.8)) //output:- 7
+document.writeln("<br/> ceil of 8.9: " + Math.floor(8.9)) //output:- 8
+document.writeln("<br/> ceil of -4.2: " + Math.floor(-4.2)) //output:- -5
+document.writeln("<br/> ceil of 6: " + Math.floor(6)) //output:- 6
+
+
+// 👉 log() :- It returns natural logarithm of a number.
+document.writeln("<br/> log() of 1: " + Math.log(1)) //output:- 0
+document.writeln("<br/> log() of 2: " + Math.log(2)) //output:- 0.6931471805599453
+document.writeln("<br/> log() of 10: " + Math.log(10)) //output:- 2.302585092994046
+document.writeln("<br/> log() of 0: " + Math.log(0)) //output:- -Infinity
+
+
+// 👉 max() :- find maximum number
+document.writeln("<br/> max() number from 8,6,88,22,35 : " + Math.max(8,6,88,22,35)) //output:- -Infinity
+
+// 👉 min() .:- find minimum number
+document.writeln("<br/> min() number from 8,6,88,22,35 : " + Math.min(8,6,88,22,35)) //output:- -Infinity
+
+// 👉 pow():- It returns value of base to the power of exponent. .
+document.writeln("<br/> pow() number from 2 power of 6  : " + Math.pow(2,6)) //output:- - 64
+document.writeln("<br/> pow() number 5 power of 1.2  : " + Math.pow(5,1.2)) //output:- - 6.898648307306074
+
+// 👉 random():- It returns random number between 0 (inclusive) and 1 (exclusive). .
+
+function randomNumber(){
+    return Math.floor(Math.random() * 90000) + 10000;
+}
+
+// document.writeln("<br/> random() between 0 and 1 : " + Math.random())
+// document.writeln("<br/> random()  : " + randomNumber())
+document.writeln("<br/> random()  : " + randomNumber())
+
+
+// 👉 round():- It returns closest integer value of the given number.
+
+document.writeln("<br/> round()  : " + Math.round(7.5)) //output:- 8
+document.writeln("<br/> round()  : " + Math.round(7.2)) // output:- 7
+document.writeln("<br/> round()  : " + Math.round(7.8)) // output:- 8
+document.writeln("<br/> round()  : " + Math.round(-7.2)) // output:- -7
+document.writeln("<br/> round()  : " + Math.round(-7.8)) // output:- -8
+
+
+// 👉 sign():- It returns the sign of the given number
+
+document.writeln("<br/> sign()  : " + Math.sign(-7.8)) // output:- -1
+document.writeln("<br/> sign()  : " + Math.sign(5.2)) // output:- 1
+document.writeln("<br/> sign()  : " + Math.sign(0)) // output:- 0
+
+// 👉 sqrt():- It returns the square root of the given number
+
+document.writeln("<br/> sqrt()  : " + Math.sqrt(64)) // output:- 8
+document.writeln("<br/> sqrt()  : " + Math.sqrt(144)) // output:- 12
+
+
+// 👉 cbrt():- It returns the cube root of the given number
+
+document.writeln("<br/> cbrt()  : " + Math.cbrt(8)) // output:- 2
+document.writeln("<br/> cbrt()  : " + Math.cbrt(512)) // output:- 8
+document.writeln("<br/> cbrt()  : " + Math.cbrt(27)) // output:- 3
+
+// 👉 trunc():- It returns an integer part of the given number.
+
+document.writeln("<br/> trunc()  : " + Math.trunc(8.56)) // output:- 8
+document.writeln("<br/> trunc()  : " + Math.trunc(5.88)) // output:- 5
+document.writeln("<br/> trunc()  : " + Math.trunc(3.23)) // output:- 3
+document.writeln("<br/> trunc()  : " + Math.trunc(-0.65)) // output:- 0
+document.writeln("<br/> trunc()  : " + Math.trunc(-8.50
+)) // output:- -8
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</script>
+</body>
+</html>
