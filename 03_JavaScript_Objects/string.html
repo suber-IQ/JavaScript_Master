@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript - String</title>
+</head>
+<body>
+<h3>JavaScript String</h3>
+
+<script type="text/javascript">
+
+// 👉 By String literal
+
+//  var str1 = "Hello,";
+//  var str2 = 'How are you?';
+
+//  document.writeln(str1 + " " + str2 + "<br>");
+
+// 👉 By Object(new keyword)
+// var stringName = new String("I am fine");
+// console.log(stringName);
+// document.writeln(stringName);
+
+// 🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠
+// 👉 charAt() Method
+// document.writeln("<h3>String charAt() Method </h3>")
+
+// var str = "how are you";
+// document.writeln("character at 5th position: " + str.charAt(5))
+
+// 🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠
+// 👉 charCodeAt() Method (ASCII character code return)
+// document.writeln("<h3>String charCodeAt() Method </h3>")
+// var str = "how are you";
+
+// document.writeln("character code at 5th position: " + str.charCodeAt(5))
+
+// 🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠
+// 👉 concat() Method
+// document.writeln("<h3>String concat() Method </h3>")
+// var str1 = "Hello, ";
+// var str2 = "how are you";
+// var str3 = "...";
+
+// document.write("Concat string is: " + str1.concat(str2));
+// document.write("Concat string is: " + str1.concat(str2,str3));
+
+// 🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠
+// 👉 indexOf() Method
+// document.writeln("<h3>String indexOf() Method </h3>")
+
+// var str2 = "how are you";
+
+// document.writeln("indexOf string is: " + str2.indexOf("r")) //🎉 output: 5
+// document.writeln("indexOf string is: " + str2.indexOf("o")) //🎉 output: 1
+// document.writeln("indexOf string is: " + str2.indexOf("o",3)) //🎉 output: 9
+// document.writeln("indexOf string is: " + str2.indexOf("are")) //🎉 output: 4
+// document.writeln("indexOf string is: " + str2.indexOf("b")) //🎉 output: -1 (if result not found return -1)
+
+
+
+
+// 🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠
+// 👉 lastIndexOf() Method
+// document.writeln("<h3>String lastIndexOf() Method </h3>")
+
+// var str2 = "how are you";
+// var str3 = "how are you how";
+
+// document.writeln("lastIndexOf string is: " + str2.lastIndexOf("b")) //🎉 output: -1 (if result not found return -1)
+// document.writeln("lastIndexOf string is: " + str2.lastIndexOf("o")) //🎉 output: 9
+// document.writeln("lastIndexOf string is: " + str3.lastIndexOf("w")) //🎉 output: 14
+
+// 🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠
+// 👉 search() Method
+// document.writeln("<h3>String search() Method </h3>")
+
+// var str2 = "We are learning javascript. JavaScript is a wonderful scripting language";
+
+// const str3 = "color";
+// const str4 = "colour";
+// const str5 = "amrit";
+// const str6 = "SUMiT";
+// const str7 = "dppmmm";
+// const phone = "123-456-7890"
+// const animal = "I have a cat"
+// // const str8 = "hello world";
+// const str8 = "Twinkle hello world";
+// const str9 = "A string with special characters: * ^";
+// const email = "example@email.com"
+// // document.writeln("search string is: " + str2.search("javascript")) //🎉 output: 16
+// document.writeln("search string is: " + str2.search("JavaScript")) //🎉 output: 28
+// document.writeln("search string is: " + str2.search("Javascript")) //🎉 output: -1
+// document.writeln("search string is: " + str2.search(/Javascript/i)) //🎉 output: 16
+// document.writeln("search string is: " + str2.search(/Javascript/)) //🎉 output: -1
+// console.log(str2.search(/^We/)); //start of a string
+// console.log(str2.search(/language$/)); //End of a string
+// console.log(str2.search(/a*/)); //Matching Zero or More Occurrences:
+// console.log(str2.search(/a+/)); // Matching One or More Occurrences:
+// console.log(str3.search(/colou?r/)); // Matching Zero or One Occurrence:
+// console.log(str4.search(/colou?r/)); // Matching Zero or One Occurrence:
+// console.log(str2.search(/[aeiou]/)); // Character Classes: (Description: Matches any one vowel (a, e, i, o, or u).
+// console.log(str5.search(/[^aeiou]/)); // Negated Character Classes:Description: Matches any character that is not a vowel.
+// console.log(str6.search(/[a-z]/)); // Matching Ranges of Characters::Description: Matches any lowercase letter.
+// console.log(str6.search(/[a-z]/)); //Using Quantifiers:(Description: Matches between 2 and 4 occurrences of the letter 'a'.)
+// console.log(str7.search(/m{2,4}/)); //Using Quantifiers:(Description: Matches between 2 and 4 occurrences of the letter 'm'.)
+// console.log(phone.match(/(\d{3})-(\d{3})-(\d{4})/)); //Grouping and Capturing:(Description: Matches a phone number pattern in the format "###-###-####" and captures the three groups of digits..)
+// console.log(animal.search(/cat|dog/)) //Using Alternation (OR Operator)::(Description: Matches either "cat" or "dog".)
+// console.log(str8.search(/\bworld\b/)) //Using Word Boundary Anchors::(Description: Matches "world" only when it appears as a whole word..)
+// console.log(str8.search(/hello(?=\sworld)/)) //Using Lookahead and Lookbehind Assertions:(Description: Matches "hello" only if it is followed by a space and then "world".)
+// console.log(str9.search(/[.*+?^${}()|[\]\\]/g)) //Using Character Escapes:(Description: Matches any of the special characters within square brackets.)
+// console.log(email.search( /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/)) //Matching Email Addresses:(Description: Matches a basic pattern for email addresses.)
+
+// Email Regular expression :- `/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/`
+//Extracting URLs from Text:- `/(http|https):\/\/[^\s]+/g`
+// Validating Password Strength: `/(?=.*[A-Z])(?=.*[a-z])(?=.*[0-9]).{8,}/` (Description: Matches passwords with at least one uppercase letter, one lowercase letter, one digit, and a minimum length of 8 characters.)
+
+
+// 🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠🌠
+// 👉 match() Method
+document.writeln("<h3>String match() Method </h3>")
+
+const regex = /(http|https):\/\/[^\s]+/g;
+
+const text = "Visit our website at http://example.com or https://www.example.com";
+
+document.writeln("Match Method: " + text.match(regex))
+console.log("Match Method: " + text.match(regex))
+document.writeln("<br/>")
+document.writeln("Match Method: " + text.match('website'))
+document.writeln("Match Method: " + text.match('moon')) //output- null (if result not found return null)
+document.writeln("<br/> Match Method: " + text.match('Website')) //output- null (if result not found return null)
+document.writeln("<br/> Match Method: " + text.match(/Website/i)) //output:- website
+
+
+
+</script>
+</body>
+</html>
