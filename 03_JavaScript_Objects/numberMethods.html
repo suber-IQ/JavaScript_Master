@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript - Number Methods</title>
+    <style>
+        h3{
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+<h3>Number Methods</h3>
+<script type="text/javascript">
+
+
+document.write("<h4>isFinite() Method: </h4>")
+// 👉 isFinite() Method
+document.writeln("<br/> 2 is isFinite: " + Number.isFinite(2)) //output: true
+document.writeln("<br/> h is isFinite: " + Number.isFinite("h")) //output: false
+document.writeln("<br/> -5 is isFinite: " + Number.isFinite(-5)) //output: true
+document.writeln("<br/> NaN is isFinite: " + Number.isFinite(NaN)) //output: false
+document.writeln("<br/>(0,10) NaN is isFinite: " + Number.isFinite((0,10))) //output: true
+document.writeln("<br/>(10,0) NaN is isFinite: " + Number.isFinite((10,0))) //output: true
+
+// 👉 isInteger() Method
+document.write("<h4>isInteger() Method: </h4>")
+document.writeln("<br/>2 an isInteger: " + Number.isInteger(2)) // output:  true
+document.writeln("<br/>Infinity an isInteger: " + Number.isInteger(Infinity)) //output: false
+document.writeln("<br/>Negative Infinity an isInteger: " + Number.isInteger(-Infinity)) //output: false
+document.writeln("<br/>NaN  an isInteger: " + Number.isInteger(NaN)) //output: false
+document.writeln("<br/>float(1.5) an isInteger: " + Number.isInteger(1.5)) //output: false
+
+// 👉 parseFloat() Method
+
+document.write("<h4>parseFloat() Method: </h4>")
+document.writeln("<br/>'85' an parseFloat(convert into float): " + Number.parseFloat("85")) //output: 85
+document.writeln("<br/>'-85' an parseFloat(convert into float): " + Number.parseFloat("-85")) //output: -85
+document.writeln("<br/>'-25.5' an parseFloat(convert into float): " + Number.parseFloat("-25.5")) //output: -25.5
+document.writeln("<br/>'Hello' an parseFloat(convert into float): " + Number.parseFloat("Hello")) //output: NaN
+document.writeln("<br/>'8eight' an parseFloat(convert into float): " + Number.parseFloat("8eight")) //output: 8
+document.writeln("<br/>'eight95' an parseFloat(convert into float): " + Number.parseFloat("eight95")) //output: NaN
+
+// 👉 parseInt() Method
+
+document.write("<h4>parseInt() Method: </h4>")
+document.writeln("<br/>'85' an parseInt(convert into Int): " + Number.parseInt("85")) //output: 85
+document.writeln("<br/>'35.5' an parseInt(convert into Int): " + Number.parseInt("35.5")) //output: 35
+document.writeln("<br/>'-35.5' an parseInt(convert into Int): " + Number.parseInt("-35.5")) //output: -35
+document.writeln("<br/>'eight' an parseInt(convert into Int): " + Number.parseInt("eight")) //output: NaN
+document.writeln("<br/>'88eight' an parseInt(convert into Int): " + Number.parseInt("88eight")) //output: 88
+document.writeln("<br/>'eight93' an parseInt(convert into Int): " + Number.parseInt("eight93")) //output: NaN
+
+// 👉 toExponential() Method
+var num = 2;
+var num1 = 5;
+document.write("<h4>toExponential() Method: </h4>")
+document.writeln("<br/>2 to Exponential Number with base 2: " + num.toExponential(2)) //output: 5.00e+0
+document.writeln("<br/>2 to Exponential Number with base 5: " + num1.toExponential(2)) //output: 5.00e+0
+
+// 👉 toFixed() Method
+
+document.write("<h4>toFixed() Method: </h4>")
+document.writeln("<br/>value of PI is toFixed: " + Math.PI.toFixed(2)) //output: 3.14 (3.141592653589793)
+
+// 👉 toPrecision() Method
+document.write("<h4>toPrecision() Method: </h4>")
+document.writeln("<br/>value of PI toPrecision(into string): " + Math.PI.toPrecision(3) ) //output: "3.14"
+console.log(typeof Math.PI.toPrecision(3)); //output: string
+
+
+// 👉 toString() Method
+var num5 = 999
+document.write("<h4>toString() Method: </h4>")
+document.writeln("<br/>value of 999 in string: " +  num5.toString()  ) //output: 999
+
+
+
+
+
+
+
+
+
+
+
+</script>
+</body>
+</html>
