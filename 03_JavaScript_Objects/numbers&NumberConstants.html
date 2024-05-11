@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript - Numbers and Number Constants</title>
+    <style>
+        h3{
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+<h3>Numbers and Number Constants</h3>
+
+<script type="text/javascript">
+// 👉 Initialized numbers in JavaScript
+var x = 2;
+var x = 2.785;
+var z = 45e2; // (4500)
+var a = new Number(16);
+var p = "sumit"
+
+
+document.writeln("<h4> MIN_VALUE: "+  Number.MIN_VALUE + " </h4>") //output: 5e-324
+document.writeln("<h4> MAX_VALUE: "+  Number.MAX_VALUE + " </h4>") //output:- 1.7976931348623157e+308
+document.writeln("<h4> POSITIVE_INFINITY: "+  Number.POSITIVE_INFINITY + " </h4>") //output:- Infinity
+document.writeln("<h4> NEGATIVE_INFINITY: "+  Number.NEGATIVE_INFINITY + " </h4>") //output:- -Infinity
+
+
+document.writeln("<br/> isNaN to check 'g' is a number: " + isNaN('g'))
+document.writeln("<br/> isNaN to check 2 is a number: " + isNaN(2))
+
+
+</script>
+
+</body>
+</html>
