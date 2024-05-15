@@ -1,0 +1,25 @@
+Question 1: Write a JavaScript Program to create an object named person that has properties like firstname,lastname and age using object literal techique.Display the object data in one statement as "firstname: value,lastname: value,age: value".
+
+Question 2: Write a JavaScript Program to create an Array and store 10 numeric values using the constructor method. Display the array data on document.Perform below mentiond operations:
+1. get only those numbers from the array which are greated then the number stored at the 4th position.
+2. get the index of the element that is the maximum number from the array.
+
+Question 3: Write a JavaScript Program to create a String that has statement " This is MyWorld"  using object method. Perform below mentioed operations on the string.
+1. create a new string using splice method on the existing string that contains "LearnVern" only.
+2. remove all the unnecessary spaces entered in the string using appropriate method.
+3. add another string "MyWorld is an amazing place to learn world". using concatenation related methods.
+
+
+Question 4: Write a JavaScript Program and create an object for todays date.
+1. get the date and show it on the document.
+2. show date,month and year in dd/MM/YYYY format.
+
+Question 5: Write a JavaScript Program and create an Array of 10 numbers.
+1. find the maximum and minimum number using Math Objects methods.
+2. store a variable x with value 1.5 and display all the trignometric values of x using Math Object methods.
+
+
+Question 6: Write a JavaScript Program and check if below mentioned inputs are numbers or not using Number methods appropriate method.
+1. 102
+2. 13e4
+3. abc
