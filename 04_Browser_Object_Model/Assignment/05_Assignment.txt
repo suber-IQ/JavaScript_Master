@@ -1,0 +1,20 @@
+Question 1: Write a JavaScript Program which accepts name and age of a user using a prompt box and show it on the document
+
+Question 2: Write a JavaScript Program that show an alert box with your name after 5 seconds of waiting period.
+
+Question 3: Write a JavaScript Program that can redirect until last 5 visited webpages and also can jump to specified webpage in a browser.
+
+Question 4: Write a JavaScript Program that prints below mentioned information on the screen:
+1. Browser name
+2. Browser Version
+3. Check if cookies are enabled or not
+4. Installed Plugins
+5. User Agents
+
+Question 5: Write a JavaScript Program that prints below mentioned information on the screen:
+1. Browser Height
+2. Browser Width
+3. Available Height
+4. Available Width
+
+Note: Available height and width will be checked on resizing the screen.

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Dom - History Object</title>
+</head>
+<body>
+<h3>JavaScript Dom - History Object</h3>
+<!-- <input type="button" value="Go to Previous page" onclick="goBack()"> -->
+<!-- <input type="button" value="Go to next page" onclick="goForward()"> -->
+<!-- <input type="button" value="Go back to to previous 2 pages" onclick="functionGo()"> -->
+<input type="button" value="Go to next 2 page" onclick="functionGo()">
+<script type="text/javascript">
+// 👉 History Object
+// document.writeln("current page history: " + history.length);
+
+// 👉 History Object of method (back())
+// function goBack(){
+    // history.back();
+// }
+// 👉 History Object of method (forward())
+// function goForward(){
+//   history.forward();
+// }
+// 👉 History Object of method (go())
+function functionGo(){
+//   history.go(-2);
+  history.go(2);
+}
+</script>
+</body>
+</html>

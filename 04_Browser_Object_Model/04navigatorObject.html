@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Dom - Navigator object</title>
+</head>
+<body>
+<h3>JavaScript Dom - Navigator object</h3>
+<script type="text/javascript">
+// 👉  Navigator object
+     document.writeln("<h3> Navigator Object Properties</h3>");
+     document.writeln("<br/> appName: " + navigator.appName);
+     document.writeln("<br/> appVersion: " + navigator.appVersion);
+     document.writeln("<br/> appCodeName: " + navigator.appCodeName);
+     document.writeln("<br/> cookieEnabled: " + navigator.cookieEnabled);
+     document.writeln("<br/> userAgent: " + navigator.userAgent);
+     document.writeln("<br/> language: " + navigator.language);
+     document.writeln("<br/> userLanguage: " + navigator.userLanguage);
+     document.writeln("<br/> plugins: " + navigator.plugins);
+     document.writeln("<br/> systemLanguage: " + navigator.systemLanguage);
+     document.writeln("<br/> mimeTypes: " + navigator.mimeTypes);
+     document.writeln("<br/> platform: " + navigator.platform);
+     document.writeln("<br/> online: " + navigator.online);
+
+    //  👉 Navigator method
+    document.writeln("<br/> Check if JAVA is enabled: " + navigator.javaEnabled());
+    document.writeln("<br/> Check if taint is enabled: " + navigator.taintEnabled()); //navigator.taintEnabled is not a function (remove)
+
+</script>
+</body>
+</html>
