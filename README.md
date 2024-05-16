@@ -3451,3 +3451,259 @@ console.log((3.14).toString()); // "3.14"
 
 
 ```
+
+## 🎏 Browser Object Model
+
+### 1. JavaScript Window - The Browser Object Model
+- The Browser Object Model(BOM) is used to interact with the browser.
+- The default object of browser is window means you can all the functions of window by specifying window or directly.
+
+  `For example:
+    window.alert("Hello JavaScript!");`
+
+  `Above is same as: alert("hello JavaScript!");`
+
+### 2. JavaScript Dom - Window Object
+- The window object represents a window in browser. An Object of window is created automatically by the browser.
+- Window is the object of browser, it is not the object of javascript. The javascript objects are string,array,date etc.
+- There are several Window Methods Available in through Window Object
+
+#### 👉 Methods of Window Object
+
+| Method | Description |
+| ----------------- | ----------- |
+| `1. alert()` | displays the alert box containing message with ok button. |
+| `2. confirm()` | displays the confirm dialog box containing message with ok and cancel button. |
+| `3. prompt()` | displays a dialog box to get input from the user. |
+| `4. open()` | opens the new window. |
+| `5. close()` | closes the current window. |
+| `6. setTimeout()` | performs action after specified time like calling function,evaluating expressions etc. |
+
+  `Example: `
+```javascript
+// 👉 1 Alert Method:
+// Display an alert dialog box
+window.alert("Hello! This is an alert message.");
+
+// 👉 2:Confirm Method:
+ // Display a confirmation dialog box
+var result = window.confirm("Are you sure you want to proceed?");
+if (result) {
+    // User clicked 'OK'
+    console.log("User confirmed.");
+} else {
+    // User clicked 'Cancel'
+    console.log("User cancelled.");
+}
+
+// 👉 3:Prompt Method:
+// Display a dialog box with a message and an input field
+var userInput = window.prompt("Please enter your name:");
+if (userInput !== null) {
+    console.log("User entered: " + userInput);
+} else {
+    console.log("User cancelled.");
+}
+
+// 👉 4. Open Method:
+// Open a new browser window
+var newWindow = window.open("https://example.com", "_blank", "width=600,height=400");
+
+// 👉 5. Close Method:
+// Close the current browser window
+window.close();
+
+// 👉 6. setTimeout Method:
+// Execute a function after a specified delay (in milliseconds)
+function sayHello() {
+    console.log("Hello!");
+}
+setTimeout(sayHello, 2000); // Display "Hello!" after 2 seconds
+
+
+```
+
+### 3. JavaScript Dom - History Object
+- The JavaScript history object represents an array of URLs visited by the user. By using this object,you can load previous, forward or any particular page.
+
+  `Syntax: window.history or history`
+
+#### 👉 Property
+- There is only one Property in History Object
+`history.length;`
+
+- The length property returns the number of URLs in the history list of the current browser window.
+- The property returns at least 1, because the list includes the currently loaded page.
+
+`Example: var x = history.length;`
+
+#### 👉 History back() Method
+- The back() method loads the previous URL in the history list. This is the same as clicking the "Back button" in your browser.
+
+`Example: `
+```javascript
+<script>
+  <button onclick="goBack()">Go Back</button>
+  function goBack(){
+    window.history.back();
+  }
+```
+#### 👉 History forward() Method
+- Clicking the "Go Forward" button will take you to the next page in the browsing history, just like clicking the browser's forward button.
+
+  `Example: `
+```javascript
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>History Navigation</title>
+</head>
+<body>
+
+<button onclick="goBack()">Go Back</button>
+<button onclick="goForward()">Go Forward</button>
+
+<script>
+function goBack() {
+  window.history.back();
+}
+
+function goForward() {
+  window.history.forward();
+}
+</script>
+
+</body>
+</html>
+
+```
+
+#### 👉 History go() Method
+- The go() method loads a specific URL from the history list.
+
+  `Example: `
+```javascript
+ <button onclick="goBack()"> Go Back 2 Pages </button>
+
+ <script>
+  function goBack(){
+    window.history.go(-2)
+    {/* window.history.go(2) */}
+  }
+  </script>
+```
+
+### 4. JavaScript Dom - Navigator Object
+- The JavaScript navigator object is used for browser detection.It can be used to get browser information such as appName,appCodeName,userAgent etc.
+
+`Syntax: window.navigator or navigator`
+
+#### 👉 Navigator Object Property
+
+| Property | Description |
+| ----------------- | ----------- |
+| `1. appName` | returns the name. |
+| `2. appVersion` | returns the version. |
+| `3. appCodeName` | returns the code name. |
+| `4. cookieEnabled` | returns true if cookie is enabled otherwise false. |
+| `5. userAgent` | returns the user agent. |
+| `6. language. ` | returns the language. It is supported in  Netscape and Firefox only. |
+| `7. userLanguage ` | returns the user language. It is supported in IE only. |
+| `8. plugins ` | returns the plugins. it is supported in Netscape and Firefox only. |
+| `9. systemLanguage ` | returns the system language. It is supported in IE only. |
+| `10. mimeTypes[] ` | returns the array of mime type. It is supported in Netscape Firfox only. |
+
+  `Exameple: `
+```javascript
+  // 👉1.  appName:
+  // Get the name of the browser
+var browserName = window.navigator.appName;
+console.log("Browser Name: " + browserName);
+
+  // 👉2. appVersion:
+// Get the version information of the browser
+var browserVersion = window.navigator.appVersion;
+console.log("Browser Version: " + browserVersion);
+
+  // 👉3.appCodeName:
+// Get the code name of the browser
+var browserCodeName = window.navigator.appCodeName;
+console.log("Browser Code Name: " + browserCodeName);
+
+  // 👉4. cookieEnabled:
+// Check if cookies are enabled in the browser
+var areCookiesEnabled = window.navigator.cookieEnabled;
+console.log("Cookies Enabled: " + areCookiesEnabled);
+
+  // 👉5. userAgent:
+// Get the user agent string of the browser
+var userAgentString = window.navigator.userAgent;
+console.log("User Agent: " + userAgentString);
+
+  // 👉6. language:
+// Get the preferred language of the user
+var preferredLanguage = window.navigator.language;
+console.log("Preferred Language: " + preferredLanguage);
+
+  // 👉7. userLanguage:
+// Get the language of the user interface
+var userInterfaceLanguage = window.navigator.userLanguage;
+console.log("User Interface Language: " + userInterfaceLanguage);
+
+  // 👉8. plugins:
+// Get information about installed plugins
+var installedPlugins = window.navigator.plugins;
+console.log("Installed Plugins: ", installedPlugins);
+
+
+  // 👉9. systemLanguage:
+// Get the system's language
+var systemLanguage = window.navigator.systemLanguage;
+console.log("System Language: " + systemLanguage);
+
+  // 👉10. mimeTypes:
+// Get information about supported MIME types
+var supportedMimeTypes = window.navigator.mimeTypes;
+console.log("Supported MIME Types: ", supportedMimeTypes);
+
+// 👉 another properties:
+
+ document.writeln("<br/> platform: " + navigator.platform);
+     document.writeln("<br/> online: " + navigator.online);
+
+    //  👉 Navigator method
+    document.writeln("<br/> Check if JAVA is enabled: " + navigator.javaEnabled());
+    document.writeln("<br/> Check if taint is enabled: " + navigator.taintEnabled()); //navigator.taintEnabled is not a function (remove)
+
+
+```
+
+### 5. JavaScript Dom - Screen Object
+- The JavaScript screen object holds information of browser screen. It can be used to display screen width,height,colorDepth,pixelDepth etc.
+
+  `Syntax: window.screen or screen`
+
+
+#### 👉 Screen Object Property
+
+  | Property | Description |
+| ----------------- | ----------- |
+| `1. width` | returns the width of the screen. |
+| `2. height` | returns the height of the screen. |
+| `3. availWidth` | returns the available width. |
+| `4. availHeight` | returns the available height. |
+| `5. colorDepth` | returns the color depth. |
+| `6. pixelDepth` | returns the pixel depth. |
+
+  `Example: `
+```javascript
+ //   👉 Screen Object Properties
+         document.writeln("<br/> Screen width: " + screen.width)
+         document.writeln("<br/> Screen height: " + screen.height)
+         document.writeln("<br/> Screen Available width: " + screen.availWidth)
+         document.writeln("<br/> Screen Available height: " + screen.availHeight)
+         document.writeln("<br/> Screen Color Depth: " + screen.colorDepth)
+         document.writeln("<br/> Screen Pixel Depth: " + screen.pixelDepth)
+```
