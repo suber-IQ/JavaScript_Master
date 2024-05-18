@@ -1,0 +1,12 @@
+Question 1: Write a JavaScript Program that gets the firstname from the user and prints on a label having ID "firstName".
+
+Question 2: Write a JavaScript Program that gets the Age from the user and prints on 5 multiple <p> having class "age".
+
+Question 3: Write a JavaScript Program that contains a radio button of gender.Using getElementByName,get all the possible values of the gender and alert them.
+
+Question 4: Write a JavaScript Program that calculates total number of available <p> tags on the document.
+
+Question 5: Write a JavaScript Program that dynamically generates one textarea if button named "add Address" is clicked.
+
+Question 6: Write a JavaScript Program and perform below steps:
+1. Create a prompt which accepts are and show it on the document at the end of the statement "Person's age is : (value received from prompt)".
