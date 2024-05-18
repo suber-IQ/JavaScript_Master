@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript- Document Object Model - DOM</title>
+
+</head>
+<body>
+    <h3>JavaScript - Document Object Model - DOM</h3>
+
+
+    <form name="form1">
+        Enter Your Name: <input type="text" name="name" />
+        <br>
+        <input type="button" value="Click Me!" onclick="showName()" />
+    </form>
+
+    <script type="text/javascript">
+         function showName(){
+            var name = document.form1.name.value;
+            alert("Welcome : " + name);
+         }
+    </script>
+
+</body>
+</html>
