@@ -1,16 +1,95 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>JavaScript - Document Object Methods</title>
-</head>
-<body>
-
+  </head>
+  <body>
     <h3>JavaScript - Document Object Methods</h3>
 
+    <!-- 👉 document.getElementById() -->
+    <!-- <form>
+        Enter Phone Number: <input type="number" id="phoneNumber" />
+        <br/>
+        <input type="button" value="Show Contact Number" onclick="showNumber()" />
+    </form> -->
+    <!-- 👉 document.getElementsByClassName() -->
+    <!-- <div class="abc">
+    This is a Class 1
+</div>
+<div class="abc">
+    This is a Class 2
+</div>
+<div class="abc">
+    This is a Class 3
+</div> -->
+ <!-- 👉 document.getElementsByName() -->
+
+<!-- <form>
+    Male: <input type="radio" name="gender" value="Male" />
+    <br/>
+    <br/>
+    Female: <input type="radio" name="gender" value="Female" />
+    <br/>
+    <br/>
+    <input type="button" value="Show Data" onclick="showElements()" />
+</form> -->
+ <!-- 👉 document.getElementsByTagName() -->
+
+<p>This is a p tag 1</p>
+<p>This is a p tag 2</p>
+<p>This is a p tag 3</p>
+<p>This is a p tag 4</p>
+<p>This is a p tag 5</p>
+
+<form>
+    <input type="button" value="Count tag Number" onclick="countTag()">
+</form>
+
+
     <script type="text/javascript">
+      // 👉 document.getElementById()
+      // function showNumber() {
+      //    var phoneNumber = document.getElementById("phoneNumber").value;
+      //    alert("Phone Number: " + phoneNumber);
+      // }
+      // 👉 document.getElementsByClassName()
+      // var x = document.getElementsByClassName("abc")
+      // for(value of x){
+      //   alert(value.innerText);
+      // }
+      // 👉 document.getElementsByName()
+
+    //   function showElements(){
+    //     var x = document.getElementsByName("gender");
+    //     // alert("Total Genders available: " + x.length);
+    //     let selectedGender = null;
+
+    //     for(let i = 0; i < x.length; ++i){
+    //         if(x[i].checked){
+    //             selectedGender = x[i].value;
+    //             break;
+    //         }
+    //     }
+
+    //     // display an alert
+    //     if(selectedGender){
+    //         alert("Gender selected: " + selectedGender);
+    //     }else{
+    //         alert("No gender selected")
+    //     }
+    //   }
+
+//   👉 document.getElementsByTagName()
+
+function countTag(){
+   var x  = document.getElementsByTagName("p");
+   var y  = document.getElementsByTagName("input");
+   alert("Total number of p tags are : " + x.length);
+   alert("Total number of input tags are : " + y.length);
+}
 
     </script>
-</body>
+  </body>
 </html>
