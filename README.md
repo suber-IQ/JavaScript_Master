@@ -3847,3 +3847,116 @@ console.log("Supported MIME Types: ", supportedMimeTypes);
 </html>
 
 ```
+
+## 🎏 JavaScript Validation
+
+### 1. JavaScript Form Validations
+
+  `Exmaple: `
+```javascript
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Complex Form Validation Example</title>
+    <script>
+        function validateForm() {
+            // Get the values from the form fields
+            var name = document.forms["myForm"]["name"].value;
+            var email = document.forms["myForm"]["email"].value;
+            var password = document.forms["myForm"]["password"].value;
+            var confirmPassword = document.forms["myForm"]["confirmPassword"].value;
+            var phone = document.forms["myForm"]["phone"].value;
+            var age = document.forms["myForm"]["age"].value;
+
+            // Validate name: not empty
+            if (name == null || name.trim() === "") {
+                alert("Please enter your name.");
+                return false;
+            }
+
+            // Validate email: basic pattern check
+            if (!validateEmail(email)) {
+                alert("Please enter a valid email address.");
+                return false;
+            }
+
+            // Validate password: at least 8 characters, one uppercase, one lowercase, one number
+            if (!validatePassword(password)) {
+                alert("Password must be at least 8 characters long and contain at least one uppercase letter, one lowercase letter, and one number.");
+                return false;
+            }
+
+            // Validate confirm password: matches password
+            if (password !== confirmPassword) {
+                alert("Passwords do not match.");
+                return false;
+            }
+
+            // Validate phone number: must be 10 digits
+            if (!validatePhone(phone)) {
+                alert("Please enter a valid phone number (10 digits).");
+                return false;
+            }
+
+            // Validate age: must be a number between 18 and 100
+            if (!validateAge(age)) {
+                alert("Please enter a valid age (18-100).");
+                return false;
+            }
+
+            return true; // All validations passed
+        }
+
+        function validateEmail(email) {
+            // Basic email validation pattern
+            var re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            return re.test(email);
+        }
+
+        function validatePassword(password) {
+            // Password validation pattern: at least 8 characters, one uppercase, one lowercase, one number
+            var re = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d]{8,}$/;
+            return re.test(password);
+        }
+
+        function validatePhone(phone) {
+            // Phone validation pattern: exactly 10 digits
+            var re = /^\d{10}$/;
+            return re.test(phone);
+        }
+
+        function validateAge(age) {
+            // Age validation: must be a number between 18 and 100
+            age = Number(age);
+            return age >= 18 && age <= 100;
+        }
+    </script>
+</head>
+<body>
+    <form name="myForm" action="nextpage.html" method="post" onsubmit="return validateForm()">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name"><br><br>
+
+        <label for="email">Email:</label>
+        <input type="text" id="email" name="email"><br><br>
+
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password"><br><br>
+
+        <label for="confirmPassword">Confirm Password:</label>
+        <input type="password" id="confirmPassword" name="confirmPassword"><br><br>
+
+        <label for="phone">Phone Number:</label>
+        <input type="text" id="phone" name="phone"><br><br>
+
+        <label for="age">Age:</label>
+        <input type="text" id="age" name="age"><br><br>
+
+        <input type="submit" value="Submit">
+    </form>
+</body>
+</html>
+
+```
+
+
