@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript - Prototype Object</title>
+</head>
+<body>
+
+<h3>JavaScript Prototype</h3>
+
+    <script type="text/javascript">
+            function Employee(firstName, lastName){
+                this.firstName = firstName;
+                this.lastName = lastName;
+            }
+
+            Employee.prototype.fullName = function(){
+                return this.firstName + " " + this.lastName;
+            }
+            Employee.prototype.company = "Suber-IQ"
+            var emp1 = new Employee("Sumit","kumar");
+            var emp2 = new Employee("Sunil","Sharma");
+
+            document.writeln(emp1.fullName() + "<br>");
+            document.writeln(emp1.firstName + " " + emp1.lastName + " " + "Company: " + emp1.company + "<br>");
+            document.writeln(emp2.fullName() + "<br>");
+    </script>
+
+
+</body>
+</html>
