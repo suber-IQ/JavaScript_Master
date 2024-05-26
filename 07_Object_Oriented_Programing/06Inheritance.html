@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript - Inheritance</title>
+
+</head>
+<body>
+    <h3>Inheritance in JavaScript</h3>
+
+    <script type="text/javascript">
+       // 👉 Exiting class (inbuilt class)
+    //    class Moment extends Date{
+    //         constructor(){
+    //             super();
+    //         }
+    //    }
+
+    //    var m = new Moment();
+    //    document.writeln("Today's date: " + m.getDate() + "-" + (m.getMonth() + 1) + "-" + m.getFullYear());
+       // 👉 Custom Class
+        // class Bike{
+        //     constructor(){
+        //         this.companyName = "Honda";
+        //     }
+        // }
+        // class Vehicle extends Bike{
+        //     constructor(name,price){
+        //         super();
+        //         this.name = name;
+        //         this.price = price;
+        //     }
+        // }
+
+        // var v1 = new Vehicle("Shine",70000);
+        // document.writeln("Bike Name: " + v1.name + "<br>");
+        // document.writeln("Bike Price: " + v1.price + "<br>");
+        // document.writeln("Bike CompanyName: " + v1.companyName + "<br>");
+
+        // var v2 = new Vehicle("CBR",120000);
+        // document.writeln("Bike Name: " + v2.name + "<br>");
+        // document.writeln("Bike Price: " + v2.price + "<br>");
+        // document.writeln("Bike CompanyName: " + v2.companyName + "<br>");
+       // 👉 Prototype Based Approach
+            function Bike(company){
+                this.company = company;
+            }
+
+            Bike.prototype.getCompany = function(){
+                return this.company;
+            }
+            function Vehicle(name,price){
+                this.name = name;
+                this.price = price;
+            }
+
+            var bike = new Bike("Honda");
+            Vehicle.prototype = bike;
+
+            var v1 = new Vehicle("Shine",80000);
+             document.writeln("Bike Name: " + v1.name + "<br>");
+        document.writeln("Bike Price: " + v1.price + "<br>");
+        document.writeln("Bike Company: " + v1.company + "<br>");
+
+
+
+
+    </script>
+</body>
+</html>
