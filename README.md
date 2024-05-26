@@ -3707,3 +3707,143 @@ console.log("Supported MIME Types: ", supportedMimeTypes);
          document.writeln("<br/> Screen Color Depth: " + screen.colorDepth)
          document.writeln("<br/> Screen Pixel Depth: " + screen.pixelDepth)
 ```
+
+## 🎏 Document Object Model
+
+### 1. JavaScript Document Object Model - DOM
+- The document object represents the whole html document.
+- When html document is loaded in the browser, it becomes a document object. It is the root element that represents the html document.
+- It has properties and methods. By the help of document object, we can add dynamic content to our web page.
+
+  `Syntax: window.document or document`
+- document -> anchor,form,link
+- form -> text,textarea,checkbox,radio,select->(option),reset,button
+
+  `Example: `
+```javascript
+    <form name="form1">
+        Enter Your Name: <input type="text" name="name" />
+        <br>
+        <input type="button" value="Click Me!" onclick="showName()" />
+    </form>
+
+
+    <script type="text/javascript">
+         function showName(){
+            var name = document.form1.name.value;
+            alert("Welcome : " + name);
+         }
+    </script>
+```
+
+#### 👉 Methods of Document Object
+
+| Method | Description |
+| ----------------- | ----------- |
+| `1 write("string")` | writes the given string on the document. |
+| `2 writeln("string")` | writes the given string on the document with newline character at the end. |
+| `3 getElementById()` | returns the element having the given id value. |
+| `4 getElementsByName()` | returns the element having the given name value. |
+| `5 getElementsByTagName()` | returns the element having the given tag name |
+| `6 getElementsByClassName()` | returns the element having the given class name. |
+
+  `Example of write & writeln: `
+```javascript
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Document Write Example</title>
+</head>
+<body>
+    <script>
+        document.write("Hello, world!");
+        document.writeln("This is a new line.");
+        document.writeln("This is another line.");
+    </script>
+</body>
+</html>
+
+```
+  `Example of document.getElementById: `
+```javascript
+<!DOCTYPE html>
+<html>
+<head>
+    <title>GetElementById Example</title>
+</head>
+<body>
+    <h1 id="header">Hello, world!</h1>
+    <script>
+        var element = document.getElementById("header");
+        console.log(element.innerText);  // Outputs: Hello, world!
+        element.style.color = "blue";    // Changes the text color to blue
+    </script>
+</body>
+</html>
+```
+
+  `Example of document.getElementsByName: `
+```javascript
+<!DOCTYPE html>
+<html>
+<head>
+    <title>GetElementsByName Example</title>
+</head>
+<body>
+    <input type="text" name="username" value="John">
+    <input type="text" name="username" value="Doe">
+    <script>
+        var elements = document.getElementsByName("username");
+        elements.forEach(function(element) {
+            console.log(element.value);  // Outputs: John and then Doe
+            element.style.border = "1px solid red";  // Adds a red border to each input
+        });
+    </script>
+</body>
+</html>
+
+```
+
+  `Example of document.getElementsByTagName: `
+```javascript
+<!DOCTYPE html>
+<html>
+<head>
+    <title>GetElementsByTagName Example</title>
+</head>
+<body>
+    <p>First paragraph.</p>
+    <p>Second paragraph.</p>
+    <script>
+        var elements = document.getElementsByTagName("p");
+        for (var i = 0; i < elements.length; i++) {
+            console.log(elements[i].innerText);
+            elements[i].style.fontWeight = "bold";  // Makes the text bold
+        }
+    </script>
+</body>
+</html>
+
+```
+
+  `Example of document.getElementsByClassName: `
+```javascript
+<!DOCTYPE html>
+<html>
+<head>
+    <title>GetElementsByClassName Example</title>
+</head>
+<body>
+    <div class="example">First div.</div>
+    <div class="example">Second div.</div>
+    <script>
+        var elements = document.getElementsByClassName("example");
+        for (var i = 0; i < elements.length; i++) {
+            console.log(elements[i].innerText);
+            elements[i].style.backgroundColor = "yellow";  // Changes background color to yellow
+        }
+    </script>
+</body>
+</html>
+
+```
