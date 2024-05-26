@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript- Oops Encapsulation</title>
+</head>
+<body>
+
+    <h3>Oops Encapsulation</h3>
+
+    <script type="text/javascript">
+// 👉 Example 1: getter and setter methods
+        // class Student{
+        //     constructor(){
+        //         var name;
+        //         var marks;
+        //     }
+        //     getName(){
+        //         return this.name;
+        //     }
+        //     setName(name){
+        //         this.name = name;
+        //     }
+        //     getMarks(){
+        //         return this.marks;
+        //     }
+        //     setMarks(marks){
+        //         this.marks = marks;
+        //     }
+        // }
+
+        // var stud = new Student();
+        // stud.setName("Sumit");
+        // stud.setMarks(30);
+
+        // document.writeln(stud.getName() + " has secured " + stud.getMarks() + " marks");
+
+// 👉 Example 2: Prototype-based approach
+
+       function Student(name,marks){
+            var sName =  name;
+            var sMarks = marks;
+
+            Object.defineProperty(this,"name",{
+                get: function(){
+                    return sName;
+                },
+                set:function(sName){
+                    this.sName = sName;
+                }
+            })
+            Object.defineProperty(this,"marks",{
+                get: function(){
+                    return sMarks;
+                },
+                set:function(sMarks){
+                    this.sMarks = sMarks;
+                }
+            })
+       }
+
+       var stud = new Student("Sumit",20);
+       document.writeln(stud.name + " has secured " + stud.marks + " marks");
+
+
+
+
+
+    </script>
+</body>
+</html>
