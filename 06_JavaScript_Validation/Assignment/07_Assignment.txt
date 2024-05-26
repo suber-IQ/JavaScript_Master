@@ -1,0 +1,10 @@
+Question 1: Write a JavaScript Program and add a form and add fields as shown below:
+1. First Name
+2. Last Name
+3. Email
+4. Telephone Number
+5. Password
+6. Confirm Password
+7. Submit Button
+
+Make sure to apply appropriate validation on each of the field that will trigger on submit button click.
