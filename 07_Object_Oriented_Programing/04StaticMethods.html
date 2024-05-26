@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript - Static Methods</title>
+</head>
+<body>
+<h3>JavaScript Static Methods</h3>
+
+<script type="text/javascript">
+    // 👉 Example 1
+    // class Test{
+    //     static display(){
+    //         return "A Static Method is Called"
+    //     }
+    // }
+
+    // console.log(Test.display());
+    // 👉 Example 2
+    // class Test{
+    //     static display1(){
+    //         return "A Static Method 1 is Called"
+    //     }
+    //     static display2(){
+    //         return "A Static Method 2 is Called"
+    //     }
+    // }
+
+    // console.log(Test.display1());
+    // console.log(Test.display2());
+    // 👉 Example 3
+    // class Test{
+    //     static display(){
+    //         return "A Static Method is Called"
+    //     }
+    //     static display(){
+    //         return "A Static Method is Called Again"
+    //     }
+    // }
+
+    // console.log(Test.display());
+    // console.log(Test.display());
+
+    // 👉 Example 4
+        // class Test{
+        //     constructor(){
+        //         document.writeln(Test.display() + "<br>");
+        //         document.writeln(this.constructor.display());
+        //     }
+        //     static display(){
+        //         return 'A Static method 1 is called';
+        //     }
+        // }
+
+        // var t = new Test();
+
+    // 👉 Example 5
+            class Test{
+                static display(){
+                    return "Static Method called";
+                }
+                show(){
+                    document.writeln(Test.display() + "<br>");
+                    return "No-static Method called";
+                }
+            }
+
+            var t = new Test();
+            t.show();
+
+</script>
+</body>
+</html>
