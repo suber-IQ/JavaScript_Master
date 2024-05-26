@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript - Constructors</title>
+</head>
+<body>
+
+    <h3>JavaScript - Constructors</h3>
+
+    <script type="text/javascript">
+        // 👉 use constructor
+            // class Employee{
+            //     constructor(){
+            //         this.id = 100;
+            //         this.name = "ABC"
+            //     }
+            // }
+            // var emp = new Employee();
+            // console.log(emp.id + "  " + emp.name)
+        // 👉 super() keyword
+                 //parent class
+                class CompanyName{
+                    constructor(){
+                        this.companyName = "Suber-IQ";
+                    }
+                }
+                // child class
+                class Employee extends CompanyName{
+                    constructor(id,name){
+                        super();
+                        this.id = id;
+                        this.name = name;
+                        // super(); // error: Must call super constructor in derived class before accessing 'this' or returning from derived constructor
+
+                    }
+                }
+
+                var emp1 = new Employee(1,"sumit kumar");
+                console.log(emp1.companyName);
+                console.log(emp1.id);
+                console.log(emp1.name);
+
+
+
+    </script>
+</body>
+</html>
