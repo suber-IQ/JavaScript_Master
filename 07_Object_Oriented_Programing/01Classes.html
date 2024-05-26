@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JavaScript - Classes</title>
+  </head>
+  <body>
+    <h3>JavaScript Classes</h3>
+
+    <!-- 👉  Declaring a class-->
+    <script type="text/javascript">
+      // 👉 hoisting (not possible hoisting)
+      // var object1 = new Employee(5,"sumit");
+      //    object1.details();
+
+      //    var object2 = new Employee(2,"Amit");
+      //    object2.details();
+      //    class Employee{
+      //         constructor(id,name){
+      //             this.id = id;
+      //             this.name = name;
+      //         }
+      //         details(){
+      //             document.writeln("<br>id: " + this.id + " " + " <br>Name: " + this.name);
+      //         }
+      //    }
+      //    class Employee{}  // same class again (Identifier 'Employee' has already been declared)
+      //   var object1 = new Employee(5,"sumit");
+      //    object1.details();
+
+      //    var object2 = new Employee(2,"Amit");
+      //    object2.details();
+    </script>
+
+    <!-- 👉  Class Expressions-->
+    <!-- <script type="text/javascript">
+      // 👉 1️⃣ Unnamed class expressions
+    //   var object1 = class {
+    //     constructor(id, name) {
+    //       this.id = id;
+    //       this.name = name;
+    //     }
+    //   };
+    //   document.writeln(object1.name);
+    //   document.writeln(object1.id);
+      // 👉 Exmaple 2: Unnamed class expression
+      // Unnamed class expression
+    //   const Animal = class {
+    //     constructor(name) {
+    //       this.name = name;
+    //     }
+
+    //     // Method shared by all animals
+    //     speak() {
+    //       console.log(`${this.name} makes a sound.`);
+    //     }
+    //   };
+
+    //   // Create an instance
+    //   const animal = new Animal("Lion");
+    //   animal.speak(); // Output: Lion makes a sound.
+
+      // 👉 2️⃣ Re-declaring class (Hoisting posible)
+          class Animal{
+             constructor(name){
+                this.name = name;
+             }
+             speak(){
+                console.log(`${this.name} makes a sound.`);
+             }
+          }
+
+          //Reassinging the class expression to a different variable
+          var NewAnimal = class{
+            constructor(name){
+                this.name = name;
+            }
+            speak(){
+                console.log(`${this.name} makes a different sound.`);
+
+            }
+          }
+
+          //create instances
+          const animal = new Animal("Lion");
+          const newAnimal1 = new NewAnimal("Tiger");
+          const newAnimal2 = new NewAnimal("Bear");
+
+          //output
+          animal.speak(); // output:- Lion makes a sound.
+          newAnimal1.speak(); // output:- Tiger makes a different sound.
+          newAnimal2.speak(); // output:- Bear makes a different sound.
+        // 👉 again Re-declaring class
+          var NewAnimal = class{
+            constructor(name){
+                this.name = name;
+            }
+            speak(){
+                console.log(`${this.name} makes a different sound.`);
+
+            }
+          }
+
+          //create instances
+          var newAnimal3 = new NewAnimal("Goat");
+          var newAnimal4 = new NewAnimal("Dear");
+
+          //output
+          newAnimal3.speak(); // output:- Goat makes a different sound.
+          newAnimal4.speak(); // output:- Dear makes a different sound.
+    </script> -->
+      <!-- 👉 Named Class Expression  -->
+<script type="text/javascript">
+        var emp = class Employee{
+            constructor(id,name){
+                this.id = id;
+                this.name = name;
+            }
+        }
+        console.log(emp.name);
+        console.log(Employee.name);
+</script>
+</body>
+</html>
