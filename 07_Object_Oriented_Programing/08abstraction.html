@@ -9,6 +9,42 @@
     <h3>JavaScript Oops Abstraction</h3>
     <script type="text/javascript">
 
+        // function Vehicle(){
+        //     this.vehicleName = vehicleName;
+        //     throw new Error("You cannot create instance of an Abstract class")
+        // }
+        // Vehicle.prototype.display = function(){
+        //     return "Vehicle is : " + this.vehicleName;
+        // }
+
+        // function Bike(vehicleName){
+        //     this.vehicleName = vehicleName;
+        // }
+
+        // Bike.prototype = Object.create(Vehicle.prototype);
+
+        // var bike = new Bike("Honda");
+        // document.writeln(bike.display());
+
+        //👉 How to use instanceof operator to test whether the object refers to the corresponding class.
+        function Vehicle(){
+            this.vehicleName = vehicleName;
+            throw new Error("You cannot create instance of an Abstract class")
+        }
+        Vehicle.prototype.display = function(){
+            return "Vehicle is : " + this.vehicleName;
+        }
+
+        function Bike(vehicleName){
+            this.vehicleName = vehicleName;
+        }
+
+        Bike.prototype = Object.create(Vehicle.prototype);
+
+        var bike = new Bike("Honda");
+        document.writeln(bike instanceof Vehicle);
+        document.writeln(bike instanceof Bike);
+
     </script>
 </body>
 </html>

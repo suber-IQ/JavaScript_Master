@@ -1,0 +1,7 @@
+Question 1: Write a JavaScript Program to achive encapsulation in Javascript.You can create a student class,define the getter and setter methods and print the properties created for the class.
+
+Question 2: Write a JavaScript Program and create a class Vehicle.Create another class Bike which is the child class of the Vehicle class. Print Bike class properties and Parent class properties using Bike class constructor.
+
+Question 3: Write a JavaScript Program using to create two classes that consist of a method with same name.Call both the methods and print the class names accordingly.
+
+Question 4: Is it possible to create an instance of an abstract class? Create and program which has one function named Vehicle and throw appropriate error while calling the function using prototype based approach.

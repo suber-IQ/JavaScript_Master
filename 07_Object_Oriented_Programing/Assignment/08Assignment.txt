@@ -1,0 +1,11 @@
+Question 1: Write a JavaScript Program to declare a class named Employee.Create two instances of this class and re-declare the same class without any console error.
+
+Question 2:Write a JavaScript Program to create an Object name Employee with properties ID,Name and Salaty,using any Object difining method.Print the values on document in one line.
+1. Create atleast 5 intances of Employee
+2. Using appropriate Object method get the Employee name of highest salare.
+
+
+Question 3: Write a JavaScript Program to create a function named Employee and instantiate it. Add a new method to this function to return the firstname and lastname using prototype of the function.
+
+Question 4: Write a JavaScript Program and create a class Vehicle with constructorto print statement "This is Vehicle class". Create another class Car which extends Vehicle class.
+While instantiating the Car class call the Vehicle class constructor with appropriate method.
