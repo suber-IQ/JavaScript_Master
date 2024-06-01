@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Polymorphism</title>
+</head>
+<body>
+    <h3>JavaScript Polymorphism</h3>
+    <script type="text/javascript">
+           // Polymorphism
+        //    class A{
+        //     display(){
+        //         document.writeln("A class's display Method is called");
+        //     }
+        //    }
+
+        //    class B extends A{
+        //         display(){
+        //         document.writeln("<br/>B class's display Method is called");
+        //         }
+        //    }
+
+        //    var a = [new A(),new B()];
+        //    a.forEach(function(message){
+        //         message.display();
+        //    });
+
+        //    👉 Example of Prototype approach
+           function A(){
+
+           }
+           A.prototype.display = function(){
+            return "A class's display Method is called";
+           }
+           function B() {
+
+           }
+
+           B.prototype = Object.create(A.prototype);
+           B.prototype.display = function(){
+            return "B class's display Method is called";
+           }
+
+           var a = [new A(),new B()];
+           a.forEach(function(message){
+               document.writeln(message.display() + "<br>")
+           })
+
+    </script>
+</body>
+</html>
