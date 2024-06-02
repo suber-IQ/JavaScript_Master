@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript - Cookies</title>
+</head>
+<body>
+<h3>JavaScript Cookies</h3>
+
+<input type="button" value="Set Cookie" onclick="setCookie()">
+<input type="button" value="Get Cookie" onclick="getCookie()">
+<script type="text/javascript">
+       function setCookie(){
+         document.cookie = "companyName=SuberIQ";
+       }
+       function getCookie(){
+         if(document.cookie.length != 0){
+                alert(document.cookie);
+         }else{
+            alert("Cookie is not set");
+         }
+
+       }
+</script>
+</body>
+</html>
