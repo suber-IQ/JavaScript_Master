@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript - Cookie with Multiple Name</title>
+</head>
+<body>
+    <h3>JavaScript - Cookie with Multiple Name</h3>
+
+    Name: <input type="text" id="name"><br><br>
+    Email: <input type="text" id="email"><br><br>
+    Company Name: <input type="text" id="companyName"><br><br>
+
+
+    <input type="button" value="Set Cookie" onclick="setCookie()">
+    <input type="button" value="Get Cookie" onclick="getCookie()">
+
+    <script type="text/javascript">
+        function setCookie(){
+            // 👉 part 1  not working with combined cookies
+            // var info = "Name=" + document.getElementById("name").value + ";Email=" + document.getElementById("email").value + ";companyName=" + document.getElementById("companyName").value;
+
+            // document.cookie = info;
+
+            // 👉part 2
+            // document.cookie = "name=" + document.getElementById("name").value;
+            // document.cookie = "email=" + document.getElementById("email").value;
+            // document.cookie = "companyName=" + document.getElementById("companyName").value;
+
+            // 👉 part 3 (with Object)
+            var object1 = {};
+            object1.name = document.getElementById("name").value;
+            object1.email = document.getElementById("email").value;
+            object1.companyName = document.getElementById("companyName").value;
+
+            var jsonString = JSON.stringify(object1);
+            document.cookie = jsonString;
+        }
+        function getCookie(){
+            if(document.cookie.length != 0){
+                // alert(document.cookie);
+                var object2 = JSON.parse(document.cookie);
+                alert("Name= " + object2.name + "\nEmail= " + object2.email + "\nCompanyName= " + object2.companyName);
+            }else{
+                alert("Cookie is not set yet")
+            }
+        }
+    </script>
+</body>
+</html>
