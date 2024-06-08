@@ -1,0 +1,5 @@
+Question 1: Write a simple JavaScript Program that contains two buttons "set cookie" and "get Cookie". if cookie is not set then the "get cookie" should show appropriate message. Set a cookie named "name=your name" using "set cookie" button and display it in a alert using "get cookie" button.
+
+Question 2: Write a Javascript Program to create one cookie that contains your firstname,lastname and age. As described in question 1, use "set cookie" and "get cookie" buttons to set and retrive them.
+
+Question 3: Write a Javascript Program to delete the cookie created using question 1 by any cookie deletion method.
