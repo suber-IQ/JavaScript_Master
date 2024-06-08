@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript - Events</title>
+    <style type="text/css">
+            .react{
+                width: 100px;
+                height: 100px;
+                background-color: cyan;
+                margin: 10px;
+            }
+    </style>
+</head>
+<body onload="myFunction()" onunload="onUnload()" onresize="onResize()">
+    <h3>JavaScript - JavaScript Events</h3>
+       <!-- 👉 part 1 (Mouse event) -->
+
+    <!-- <input type="button" value="Change Backgroud" onclick="changeBackground()">
+    <div class="react" onmouseover="onMouseOver()" onmouseout="onMouseOut()" onmousedown="onMouseDown()" onmouseup="onMouseUp()" onmousemove="onMouseMove()">
+    </div> -->
+
+        <!-- 👉part 2 (keyboard) -->
+       <!-- <input type="text" onkeydown="onKeyDown()" onkeyup="onKeyUp()"> -->
+
+       <!-- 👉 part 3 (form Events) -->
+       <!-- <form onsubmit="onSubmit()">
+        <input type="text" onfocus="onFocus()" onblur="onBlur()">
+        <input type="submit" value="Submit">
+        <select id="myDropDown" onchange="onChange()">
+            <option value="">--Select--</option>
+            <option>Male</option>
+            <option>female</option>
+        </select>
+       </form> -->
+
+        <!-- 👉part 4 (Window/Document Event) -->
+
+
+    <script type="text/javascript">
+
+        // 👉 part 1 (Mouse Events)
+        // function changeBackground(){
+        //     document.body.style.background = 'yellow';
+        // }
+        // function onMouseOver(){
+        //     document.body.style.background = 'green';
+        // }
+        // function onMouseOut(){
+        //     document.body.style.background = 'white';
+        // }
+        // function onMouseDown(){
+        //     document.body.style.background = 'red';
+
+        //     //alert("Mouse Down Event is fired");
+        // }
+        // function onMouseUp(){
+        //     document.body.style.background = 'blue';
+
+        // }
+        // function onMouseMove(){
+        //     document.body.style.background = 'black';
+        // }
+        // 👉part 2 (keyboard)
+            // function onKeyDown(){
+            //     document.body.style.background = 'yellow';
+            // }
+            // function onKeyUp(){
+            //     document.body.style.background = 'green';
+            // }
+
+        // 👉part 3 (form)
+                // function onFocus(){
+                //     document.body.style.background = 'yellow';
+                // }
+                // function onSubmit(){
+                //     alert("Form submitted successfully...");
+                // }
+                // function onBlur(){
+                //     document.body.style.background = 'white';
+                // }
+                // function onChange(){
+                //     document.body.style.background = 'red';
+                // }
+        // 👉part 4 (Window/Document Event)
+                    function myFunction(){
+                        alert("window is loaded successfully");
+                    }
+                    function onUnload(){
+                        document.body.style.background = 'lightgreen';
+                    }
+                    function onResize(){
+                        document.body.style.background = 'green';
+                    }
+    </script>
+</body>
+</html>
