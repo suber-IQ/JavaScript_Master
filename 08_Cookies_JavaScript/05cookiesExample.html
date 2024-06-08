@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript - Cookies Example</title>
+</head>
+<body>
+    <h3>JavaScript - Cookies Example</h3>
+    <!-- <input type="button" value="Set Cookie" onclick="setCookie()">
+<input type="button" value="Get Cookie" onclick="getCookie()"> -->
+<!-- 👉  part 2 -->
+<select id="color" onchange="getColor()">
+    <option value="Select Color">--Select Color---</option>
+    <option value="cyan">Cyan</option>
+    <option value="lightgreen">Light Green</option>
+    <option value="skyblue">Sky Blue</option>
+</select>
+
+    <script type="text/javascript">
+        // 👉part 1
+        // function setCookie(){
+        //     document.cookie = "companyName=SuberIQ";
+        // }
+        // function getCookie() {
+        //     if(document.cookie.length != 0){
+        //         var arr = document.cookie.split("=");
+        //         alert("Cookie Name: " + arr[0] + "\n Value: " + arr[1])
+        //         // alert(document.cookie);
+        //     }else{
+        //         alert("Cookie is not set");
+            // }
+        // }
+
+        // 👉part 2
+                function getColor(){
+                    var value = document.getElementById("color").value;
+                    if(value != "Select Color"){
+                        document.bgColor= value;
+                        document.cookie = "color=" + value;
+                    }
+
+                }
+                window.onload = function(){
+                        if(document.cookie.length != 0){
+                            var array = document.cookie.split("=");
+                            document.getElementById("color").value = array[1];
+                            document.bgColor = array[1];
+                        }
+                    }
+
+    </script>
+</body>
+</html>
