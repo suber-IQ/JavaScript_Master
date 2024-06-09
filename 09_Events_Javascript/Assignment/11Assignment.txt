@@ -1,0 +1,9 @@
+Question 1: Create a webpage with one button named "Click Me!". When the user clicks this button, show an alert with message "Hello User".
+
+Question 2: Write a Javascript program to alert a message "Welcome to Javascript" when the user loads the webpage.
+
+Question 3: Write a JavaScript Program that prints the size of the everytime when the user resizes the window.
+
+Question 4: Write a JavaScript program that do nothing on clickof a blue color 200px wide div with text "Double Click Me". But change the div color to yellow when user double clicks on it.
+
+Question 5: Write a JavaScript Program that change the color of the Rectangular div when user hover on the div. Make sure to implement this using "addEventListener" method of JavaScript.
