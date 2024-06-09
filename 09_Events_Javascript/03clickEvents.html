@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript - Click Events</title>
+</head>
+<body>
+    <h3>JavaScript - Click Events</h3>
+    <!-- // 👉 part 1 (with html) -->
+    <!-- <button onclick="onClick()">Click me!</button> -->
+    <!-- // 👉 part 2 (with Javascript) -->
+    <!-- <button id="myButton">Click me!</button> -->
+    <!-- // 👉 part 3 (with addEventListener) -->
+    <button id="myButton">Click me!</button>
+    <script type="text/javascript">
+        // 👉 part 1 (with html using onclick event)c
+        // function onClick(){
+        //     document.body.style.backgroundColor = 'yellow';
+        // }
+        // 👉 part 2 (with javascript)
+        // document.getElementById("myButton").onclick = function (){
+        //     document.body.style.backgroundColor = 'lightgreen';
+        // }
+        // 👉 part 3 (with addEventListener)
+            document.getElementById("myButton").addEventListener("click", changeBackground);
+
+            function changeBackground(){
+                document.body.style.backgroundColor = "orange";
+            }
+
+    </script>
+</body>
+</html>
