@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript - OnResize Event</title>
+</head>
+<body>
+    <!-- <body onresize="onResize()"> -->
+<h3>JavaScript - OnResize Event</h3>
+<!-- 👉 part 1 (using Html) -->
+<!-- <p id="p1"></p>
+<p>This window is resized <span id="s1"></span> </p> -->
+
+<!-- <script type="text/javascript">
+    // var s1 = 0;
+    // function onResize(){
+    //     document.getElementById("p1").innerHTML = "Window width= " + window.outerWidth + " Window height= " + window.outerHeight;
+    //     s1 = s1 + 1;
+    //     document.getElementById("s1").innerHTML = s1;
+    // }
+</script> -->
+
+<!-- 👉 part 2 (using javascript) -->
+<!-- <p id="p1"></p>
+<p>This window is resize <span id="s1">0</span></p>
+<script type="text/javascript">
+    var s1 = 0;
+    document.getElementsByTagName("body")[0].onresize = function(){
+     document.getElementById("p1").innerHTML = "Window width= " + window.outerWidth + " Window height= " + window.outerHeight;
+        s1 = s1 + 1;
+        document.getElementById("s1").innerHTML = s1;
+    }
+    console.log(d);
+</script> -->
+
+<!-- 👉 part 3 (using addEventlistener) -->
+<p id="p1"></p>
+<p>This window is resize <span id="s1">0</span></p>
+<script type="text/javascript">
+    var s1 = 0;
+    // document.getElementsByTagName("body")[0].addEventListener("resize",onResize); (not working this)
+     window.addEventListener("resize",onResize);
+     function onResize(){
+     document.getElementById("p1").innerHTML = "Window width= " + window.outerWidth + " Window height= " + window.outerHeight;
+        s1 = s1 + 1;
+        document.getElementById("s1").innerHTML = s1;
+    }
+</script>
+
+
+
+</body>
+</html>
