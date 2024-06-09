@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript - AddEventListner()</title>
+</head>
+<body>
+    <h3>JavaScript - AddEventListner</h3>
+    <!-- <button id="clickButton" onclick="changeBackground();updateLine1();updateLine2()">Click Me!</button> -->
+    <button id="clickButton">Click Me!</button>
+    <p id="line1"></p>
+    <p id="line2"></p>
+    <script type="text/javascript">
+            document.getElementById("clickButton").addEventListener("click", changeBackground);
+            document.getElementById("clickButton").addEventListener("click", updateLine1);
+            document.getElementById("clickButton").addEventListener("click", updateLine2);
+
+            function changeBackground(){
+                document.body.style.background = 'yellow';
+            }
+            function updateLine1(){
+                document.getElementById("line1").innerHTML = "Welcome to JavaScript";
+            }
+            function updateLine2(){
+                document.getElementById("line2").innerHTML = "Welcome to Suber-IQ";
+
+            }
+
+    </script>
+</body>
+</html>
