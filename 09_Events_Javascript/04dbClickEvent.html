@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript - DBLclick event</title>
+    <style>
+        h2,p{
+            text-align: center;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+  <h3>JavaScript DblClick Event</h3>
+  <!-- 👉 dblClick (with html) -->
+<!-- <h2 ondblclick="onDoubleClick()">Double click on this heading</h2> -->
+
+<!-- 👉 dblClick (using javascript) -->
+<!-- <h2 id="header2">Double click on this heading</h2> -->
+
+<!-- 👉 dblClick (using javascript) -->
+<h2 id="header1">Double click on this heading</h2>
+<p id="p1"></p>
+  <script type="text/javascript">
+        // 👉 dblClick(with html )
+        // function onDoubleClick(){
+        //     document.getElementById("p1").innerHTML = "This is Suber-IQ";
+        // }
+        // 👉 dblClick(with Javascript (onclick) )
+          // document.getElementById("header2").ondblclick = function(){
+          //   document.getElementById("p1").innerHTML = "Hello, This is Suber-IQ";
+          // }
+        // 👉 dblClick(using addEventListener() method )
+        document.getElementById("header1").addEventListener("dblclick", onDoubleClick);
+
+        function onDoubleClick(){
+          document.getElementById("p1").innerHTML = "Hello, This is my name!";
+        }
+
+
+  </script>
+</body>
+</html>
