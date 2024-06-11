@@ -1,0 +1,3 @@
+Question 1: Write a JavaScript Program and create one array named fruits with some fruit names. Print arrays fruit and cars while array car is not defined yet. Use appropriate Exception Handling approach to handle this scenario.
+
+Question 2: Write a JavaScript Program to divide a number using 0. Using throw statement print on document that "Division using 0 is not possible". Make sure to display a message "Exception Handled Succesfully" at the end of the program using finally block.
