@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JavaScript - throw Statement</title>
+  </head>
+  <body>
+    <h3>JavaScript - Throw Statement</h3>
+    <!-- 👉 part 1 : (thow statment with try...catch) -->
+
+    Please Enter a number between 5 to 10:
+    <input type="text" id="id1" />
+    <button type="button" onclick="onClick()">Validate</button>
+    <p id="message" style="color: red"></p>
+    <p id="input1"></p>
+
+    <script type="text/javascript">
+
+      function onClick() {
+        var input = document.getElementById("input1");
+        var message = document.getElementById("message");
+        message.innerHTML = "";
+        input.innerHTML = "";
+        try {
+          var x = document.getElementById("id1").value;
+          if (x == "") throw "is Empty";
+          if (isNaN(x)) throw new Error("is not a number");
+          if (x < 5 || x > 9) throw "number should not be less than 5 and greater 9";
+        } catch (e) {
+          message.innerHTML = "Input " + e + "🚨";
+        }finally{
+            if(!(x=="")){
+                input.innerHTML = "value of x: " + x;
+            }
+        }
+      }
+    </script>
+
+    <!-- 👉 part 2 : (finally use) -->
+
+
+
+  </body>
+</html>
