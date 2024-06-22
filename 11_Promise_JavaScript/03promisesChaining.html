@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript - Promises chaining</title>
+</head>
+<body>
+    <h3>JavaScript - Promises chaining</h3>
+    <script type="text/javascript">
+        // 👉 Part 1
+        // new Promise(function (resolve, reject) {
+        //     // setTimeout(function(){resolve(1)},5000);
+        //     setTimeout(() => {resolve(1)},5000);
+
+        // }).then(function(value){
+        //     alert(value);
+        //     return value * 2;
+        // }).then(function(value){
+        //     alert(value);
+        //     return value*3;
+        // }).then(function(value){
+        //     alert(value);
+        //     return value * 4;
+        // }).then(function(value){
+        //     alert(value);
+        // })
+
+        // 👉 Part 2
+        new Promise(function (resolve, reject) {
+            setTimeout(() => {resolve(1)},4000);
+        }).then(function(value){
+            alert(value);
+            return new Promise(function(resolve,reject){
+                setTimeout(() => { resolve(value * 10)},3000)
+            });
+        }).then(function(value){
+            alert(value);
+            return new Promise(function(resolve,reject){
+                setTimeout(() => { resolve(value * 20)},3000)
+            });
+        }).then(function(value){
+            alert(value);
+            return new Promise(function(resolve,reject){
+                setTimeout(() => { resolve(value * 30)},3000)
+            });
+        })
+
+    </script>
+</body>
+</html>
