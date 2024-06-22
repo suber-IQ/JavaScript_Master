@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript - Async/await</title>
+</head>
+<body>
+    <h3>JavaScript - Async/await</h3>
+    <p id="result"></p>
+    <script type="text/javascript">
+
+    // 👉 part 1
+    //     function display(value){
+    //         document.getElementById("result").innerHTML = value;
+    //     }
+
+    //     function delay(ms){
+    //         return new Promise(resolve => setTimeout(resolve,ms));
+    //     }
+    //    async function myFunction(){
+    //         await delay(3000); // delay for 3000 miliseconds (3 seconds)
+    //         return "Suber-IQ is Awesome!";
+    //     }
+
+    //     myFunction().then(
+    //         (value)=> { display(value)},
+    //         (error)=> { display(error)},
+    //     )
+
+
+        /*
+         let promise = new Promise((resolve,reject)=> {
+            resolve(){
+                "Ok"
+            }
+            reject(){
+                "Errors"
+            }
+
+         })
+         promise.then(function(value),function(error));
+        */
+
+    // 👉 part 2
+
+    // async function myDisplay(){
+    //     let promise = new Promise((resolve,reject)=> {
+    //         setTimeout(() => {
+    //             resolve("Suber-IQ is Awesome!!!!!!!");
+    //         },3000);
+    //     })
+
+    //     document.getElementById("result").innerHTML = await promise;
+    // }
+
+    // myDisplay();
+
+    // 👉 part 3
+
+   async function fun(){
+        let promise = Promise.resolve(1);
+        let result = await promise;
+        alert(result);
+    }
+    fun();
+
+    </script>
+</body>
+</html>
