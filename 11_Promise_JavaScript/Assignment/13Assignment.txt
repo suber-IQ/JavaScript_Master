@@ -1,0 +1,8 @@
+Question 1: Write a JavaScript Program that prints your name after each 2 seconds interval.
+
+Question 2: Write a JavaScript Program using promise that multiplies the output of the previous promise with 3 and alerts.
+
+Question 3: Write a JavaScript Program to print "invalid user" using catch method if the user is unauthorized but if the user is authorized, return the userName and userId
+and console it.
+
+Question 4: Write a JavaScript Program using await that prints "Welcome to Suber-IQ" After 3 seconds of interval on document.
