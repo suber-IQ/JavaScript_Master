@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Promises Part 2</title>
+</head>
+<body>
+<h3>JavaScript Promises Part 2</h3>
+
+<p>The result will be displayed after 3 Seconds</p>
+<p id="result"></p>
+
+
+<script type="text/javascript">
+
+// 👉 with callback (timeout) (it is not possible to safe with error)
+// setTimeout(function(){
+//     myFunction("Suber-IQ is Awesome!");
+// },3000);
+
+// function myFunction(value){
+//  document.getElementById("result").innerHTML = value
+// }
+
+// 👉 with Promise (timeout) (it is safe with error)
+let myPromise = new Promise(function(myResolve,myReject){
+  setTimeout(function(){
+    myResolve("Suber-IQ is Awesome!");
+  },3000);
+});
+
+myPromise.then(
+    function(value){
+        document.getElementById("result").innerHTML = value;
+    }
+);
+
+
+</script>
+</body>
+</html>
