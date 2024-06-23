@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript - Typed Arrays Method</title>
+</head>
+<body>
+<h3>JavaScript - Typed Arrays Method</h3>
+
+<script type="text/javascript">
+// 👉 Typed Arrays method
+
+/* arr.copyWithin(target) */
+// var arr = [1,2,3,4,5,6,7,8,9,10];
+// arr.copyWithin(2);
+// document.writeln("arr.copyWithin(2) " + arr+"<br/>");
+
+/* arr.copyWithin(target,start) */
+// arr.copyWithin(2,3);
+// document.writeln("arr.copyWithin(2,3) " + arr);
+
+/* arr.copyWithin(target,start,end) */
+// arr.copyWithin(1,2,4);
+// document.writeln("arr.copyWithin(1,2,4) " + arr + "<br/>");
+
+/*👉 entries() */
+
+// var arr = ["HTML", "CSS", "JavaScript"];
+
+// var result = arr.entries();
+// document.writeln(result.next().value + "<br/>")
+// document.writeln(result.next().value + "<br/>")
+// document.writeln(result.next().value + "<br/>")
+
+// for(let [index,value] of result){
+//     console.log(index + " : " + value);
+// }
+
+/*👉 fill() */
+
+// var arr = [1,2,3,4,5,6,7,8,9,10];
+
+/* arr.fill(value) */
+// arr.fill(15);
+// document.writeln("<br/> arr.fill(15): " + arr);
+/* arr.fill(value,start) */
+// arr.fill(15,2);
+// document.writeln("<br/> arr.fill(15,2): " + arr);
+/* arr.fill(value,start,end) */
+// arr.fill(15,2,5);
+// document.writeln("<br/> arr.fill(15,2,5): " + arr);
+
+/*👉 find() */
+
+// var arr = [1,2,3,4,5,8,6,7,8,9,10];
+
+// const searchValue = (value) =>{
+//    return value > 5
+// }
+// var result = arr.find(searchValue);
+
+// console.log(result);
+
+
+/*👉 findIndex() */
+
+
+var arr = [1,2,3,4,5,6,7,8,9,10];
+
+
+var result = arr.findIndex(searchValue);
+
+console.log("Index : " + result);
+
+function searchValue(value) {
+    return value > 3;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</script>
+</body>
+</html>
