@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript - Typed Arrays Method part 2</title>
+</head>
+<body>
+  <h3>JavaScript - Typed Arrays Method part 2</h3>
+
+  <script type="text/javascript">
+
+    // 👉 forEach() method
+    // var arr1 = [5,10,15];
+    // let sum = 0;
+
+    // arr1.forEach(function(value){
+    //    sum += value;
+    // })
+
+    // console.log(sum);
+
+    // 👉 includes() method
+
+    // var arr1 = [5,10,15];
+
+    // let result = arr1.includes(10); // true
+    // let result = arr1.includes(15); // true
+    // let result = arr1.includes(8); // false
+    // console.log(result);
+
+    // 👉 indexOf() method
+
+    // var arr1 = [5,10,15];
+
+    // let result = arr1.indexOf(10); // index: 1
+    // let result = arr1.indexOf(15); // index: 2
+    // let result = arr1.indexOf(5); // index: 0
+  //   let result = arr1.indexOf(8); // index: -1 (not found index)
+  //  console.log(result);
+
+// 👉 join() method
+
+      // var arr = ["sumit","kumar"];
+      // var arr = ["Html","Css","JavaScript"];
+
+        //  document.writeln("<br> join method with typed array: " + arr.join(","));
+        //  document.writeln("<br> join method with typed array: " + arr.join("/"));
+        //  document.writeln("<br> join method with typed array: " + arr.join("-"));
+
+// 👉 keys() method
+
+// var arr = ["Html","Css","JavaScript"];
+
+// var result = arr.keys();
+
+// document.writeln("<br>", result.next().value); //output: 0
+// document.writeln("<br>", result.next().value); //output: 0
+// document.writeln("<br>", result.next().value); //output: 0
+// document.writeln("<br>", result.next().value); // output: undefined
+
+// 👉 reduce() method
+
+// const typedArray = new Int32Array([1, 2, 3, 4, 5]);
+
+// Using reduce with an initial value
+// const sumWithInitialValue = typedArray.reduce((accumulator, currentValue) => {
+//   return accumulator + currentValue;
+// }, 0);
+
+// console.log(sumWithInitialValue); // Output: 15
+
+// // Using reduce without an initial value
+// const sumWithoutInitialValue = typedArray.reduce((accumulator, currentValue) => {
+//   return accumulator + currentValue;
+// });
+
+// console.log(sumWithoutInitialValue); // Output: 15
+
+// 👉 set() method
+
+// var buffer1 = new Array(8);
+
+// var arr  = new Uint8Array(buffer1);
+
+// console.log(arr);
+// arr.set([1,5,9,6],3);
+
+// document.writeln(arr);
+
+// const buffer = new ArrayBuffer(16); // Create a buffer of 16 bytes
+// const typedArray = new Uint32Array(buffer);
+// console.log(typedArray); // Output: Uint32Array [0, 0, 0, 0]
+
+// 👉 subarray() method
+
+const typedArray = new Uint8Array([10, 20, 30, 40, 50]);
+const subArray = typedArray.subarray(1, 3);
+// const subArray1 = typedArray.subarray(2);
+// console.log(subArray1);
+console.log(subArray); // Output: Uint8Array [20, 30]
+// console.log(typedArray);
+
+
+
+  </script>
+</body>
+</html>
