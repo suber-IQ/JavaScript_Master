@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sets in JavaScript</title>
+</head>
+<body>
+    <h3>Sets in JavaScript</h3>
+    <script type="text/javascript">
+// 👉 add() method (sets)
+
+// var s = new Set();
+
+// s.add("HTML");
+// s.add("CSS");
+// s.add("CSS");
+// s.add("JavaScript");
+
+// for(value of s){
+//     document.writeln(value + "<br/>");
+//     console.log(value);
+// }
+
+// 👉 clear() method (sets)
+
+// var s = new Set();
+
+// s.add("HTML");
+// s.add("CSS");
+// s.add("CSS");
+// s.add("JavaScript");
+
+// for(value of s){
+//     document.writeln(value + "<br/>");
+//     console.log(value);
+// }
+// s.clear();
+
+// document.writeln("Size of the Set is: " + s.size); //after clear set size of set is 0
+
+// for(value of s){
+//     document.writeln(value + "<br/>");
+//     console.log(value);
+// }
+// 👉 delete() method (sets)
+
+// var s = new Set();
+
+// s.add("HTML");
+// s.add("CSS");
+// s.add("CSS");
+// s.add("JavaScript");
+
+// for(value of s){
+//     document.writeln(value + "<br/>");
+//     console.log(value);
+// }
+
+// s.delete("CSS");
+// document.writeln("After delete CSS: ");
+// console.log("AFter delete CSS: ");
+// for(value of s){
+//     document.writeln(value + "<br/>");
+//     console.log(value);
+// }
+
+// 👉 entries() method (sets)
+
+// var s = new Set();
+
+
+// s.add("HTML");
+// s.add("CSS");
+// s.add("CSS");
+// s.add("JavaScript");
+
+// var iteration = s.entries();
+
+// for(value of iteration){
+//     document.writeln(value + "<br/>");
+//     console.log(value);
+// }
+
+// 👉 forEach() method (sets)
+
+// var s = new Set();
+
+
+// s.add("HTML");
+// s.add("CSS");
+// s.add("CSS");
+// s.add("JavaScript");
+
+// s.forEach(function(value1,value2,s){
+//     document.writeln("Key[" + value1 + "] = " + value2 + "<br>");
+//     console.log(s);
+// })
+
+// 👉 has() method (sets)
+
+// var s = new Set();
+
+
+// s.add("HTML");
+// s.add("CSS");
+// s.add("CSS");
+// s.add("JavaScript");
+
+// document.writeln("To check whether 'CSS' exits in set 's' : " + s.has('CSS'));
+// document.writeln("<br> To check whether 'dds' exits in set 's' : " + s.has('dds'));
+// document.writeln("<br> To check whether 'Css' exits in set 's' : " + s.has('Css'));
+
+// 👉 values() method (sets)
+
+var s = new Set();
+
+
+s.add("HTML");
+s.add("CSS");
+s.add("CSS");
+s.add("JavaScript");
+
+var iterator = s.values();
+
+for(let i = 0; i < s.size; ++i){
+  console.log(iterator.next().value);
+}
+
+
+
+
+
+    </script>
+</body>
+</html>
