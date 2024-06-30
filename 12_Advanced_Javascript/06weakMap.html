@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript - WeakMap</title>
+</head>
+<body>
+<h3>JavaScript WeakMap</h3>
+<script type="text/javascript">
+
+var wm = new WeakMap();
+
+var object1 = {};
+var object2 = {};
+var object3 = {};
+var object4 = {};
+wm.set(object1, "HTML");
+wm.set(object2, "CSS");
+wm.set(object3, "JavaScript");
+
+console.log(wm.get(object1));
+console.log(wm.get(object2));
+console.log(wm.get(object3));
+
+console.log(wm.has(object1)); //true
+console.log(wm.has(object2)); //true
+// console.log(wm.has(object4)); // Uncaught ReferenceError: object4 is not defined
+console.log(wm.has(object4)); //false (with only defined)
+
+console.log("Before deleting object2");
+wm.delete(object2);
+console.log("After deleting object2");
+console.log(wm.has(object2)); //false
+
+
+
+</script>
+</body>
+</html>
