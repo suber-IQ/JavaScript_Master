@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Map</title>
+</head>
+<body>
+<h3>JavaScript Map</h3>
+
+<script type="text/JavaScript">
+
+// 👉 get() and set() method of Map Object
+
+var m = new Map();
+
+m.set(1,"HTML");
+m.set(2,"CSS");
+m.set(3,"JavaScript");
+
+
+// console.log(m.get(1));
+// console.log(m.get(2));
+// console.log(m.get(3));
+// console.log(m.get(4));
+
+
+//👉 forEach() method
+
+// m.forEach(element => {
+//     console.log(element);
+// });
+// console.log("--------------------------------");
+// m.forEach((value,key) => {
+//     console.log("Key: " + key + " : " + value);
+// });
+
+//👉 clear() method
+
+// document.writeln("Size of the Map before clear(): " + m.size)
+// m.clear();
+// document.writeln("<br> Size of the Map after clear(): " + m.size)
+
+//👉 delete() method
+
+// console.log("before deleting 'Css' from 'm': " + m.size);
+// m.delete(2);
+// console.log("After deleting 'Css' from 'm': " + m.size);
+
+//👉 entries() method
+
+// var iterator = m.entries();
+
+// for(let i = 0; i < m.size; ++i){
+//     console.log(iterator.next().value);
+// }
+
+//👉 get() and has() method
+
+// console.log(m.get(1)); // HTML
+// console.log(m.get(2)); //CSS
+// console.log(m.get(4)); //undefined
+
+// console.log(m.has(3)); //true
+// console.log(m.has(4)); // false
+
+//👉 keys() method
+
+// var iterator = m.keys();
+
+// for(let i = 0; i<m.size;++i){
+//     console.log(iterator.next().value);
+// }
+
+//👉 values() method
+
+var iterator = m.values();
+
+for(let i = 0; i < m.size; ++i){
+    console.log(iterator.next().value);
+}
+
+
+
+</script>
+</body>
+</html>
