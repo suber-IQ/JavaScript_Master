@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript - CallBacks</title>
+</head>
+<body>
+<h3>JavaScript - CallBacks</h3>
+<script type="text/javascript">
+
+// 👉 Example 1
+
+// function getData(x,y,callback){
+//     document.writeln("<br>Multiplication of '+x+' and '+y+' is: " + (x*y));
+//     callback();
+// }
+
+// function showData(){
+//     document.writeln("<br>This is the statement written through the callback function.");
+// }
+// getData(10,20,showData);
+
+// 👉 Example 2
+
+function getData(callback){
+   var name = prompt("Welcome to JavaScript \n Please enter your Name: ");
+   var age = prompt("Welcome to JavaScript \n Please enter your Age: ");
+    callback(name,age);
+}
+
+function showData(name,age){
+  document.writeln("<br> Name: " + name);
+  document.writeln("<br> Age: " + age);
+}
+
+function showDescription(a,b){
+    document.writeln("Name: " + a + "<br> Age: "+ b)
+}
+
+// getData(showData);
+getData(showDescription);
+
+
+
+
+</script>
+</body>
+</html>
