@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript - WeakSet</title>
+</head>
+<body>
+<h3>JavaScript WeakSet</h3>
+
+<script type="text/javascript">
+var w = new WeakSet();
+
+var object1 = {};
+var object2 = {};
+
+w.add(object1);
+w.add(object2);
+
+console.log("Before deleting")
+
+console.log(w.has(object1));  //true
+console.log(w.has(object2)); //true
+// console.log(w.has(object3)); //Uncaught ReferenceError: object3 is not defined
+
+console.log("After deleting");
+
+w.delete(object2);
+
+console.log(w.has(object1));  //true
+console.log(w.has(object2)); //true
+
+
+
+
+
+
+
+
+
+</script>
+</body>
+</html>
