@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Closures</title>
+</head>
+<body>
+
+
+    <script type="text/javascript">
+
+        // 👉 Example 1
+        //  function function1(){
+        //     var a = 2;
+
+        //     function function2() {
+        //         return a;
+        //     }
+
+        //     return function2;
+        //  }
+
+        //  var result = function2();
+        //  document.writeln(result) // not access without function1(outerfunction)
+
+        //  var result = function1();
+        //  document.writeln(result);
+        //  document.writeln("<br> " + result());
+
+        // 👉 Example 2
+
+        function function1(a){
+            function function2(b) {
+                return a*b;
+            }
+            return function2;
+         }
+
+         var result = function1(5);
+         document.writeln("<br>" + result(2))
+
+
+    </script>
+</body>
+</html>
