@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript - Scroll</title>
+    <style>
+        #scrollable{
+            width: 200px;
+            height: 100px;
+            overflow: scroll;
+            border: 1px solid black;
+            font-size: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h3>JavaScript - Scroll</h3>
+
+<!-- // 👉 Scroll  with Html -->
+
+    <!-- <div id="scrollable" onscroll="onScroll()">
+        Hello,<br><br>
+        Welcome to Suber-IQ.
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium, est?
+    </div> -->
+
+<!-- // 👉 Scroll  with JavaScript -->
+<!--
+    <div id="scrollable">
+        Hello,<br><br>
+        Welcome to Suber-IQ.
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium, est?
+    </div> -->
+
+    <!-- 👉 Scroll with addEventListener -->
+    <div id="scrollable">
+        Hello,<br><br>
+        Welcome to Suber-IQ.
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium, est?
+    </div>
+
+
+    <script type="text/javascript">
+// 👉 Scroll  with Html
+
+//  function onScroll(){
+//   document.getElementById("scrollable").style.background = "black";
+//   document.getElementById("scrollable").style.color = "whitesmoke";
+// }
+// 👉 Scroll  with JavaScript
+
+//     document.getElementById("scrollable").onscroll = function(){
+//   document.getElementById("scrollable").style.background = "black";
+//   document.getElementById("scrollable").style.color = "whitesmoke";
+// }
+
+// 👉 Scroll with addEventListener
+
+document.getElementById("scrollable").addEventListener("scroll",onScroll);
+
+function onScroll(){
+  document.getElementById("scrollable").style.background = "yellow";
+  document.getElementById("scrollable").style.color = "grey";
+}
+
+
+    </script>
+</body>
+</html>
