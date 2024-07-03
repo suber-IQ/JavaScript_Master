@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript - Scope</title>
+</head>
+<body>
+    <h3>JavaScript - Scope</h3>
+
+    <script type="text/javascript">
+
+        var a = 200;
+
+        function example(){
+            // var a = 300;
+            a = 300;
+            document.writeln("Value of a inside the function: " + a + "<br>");
+        }
+
+        example();
+        document.writeln("Value of a outside the function: " + a + "<br>");
+
+
+
+
+
+    </script>
+</body>
+</html>
