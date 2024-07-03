@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript - Sleep() function</title>
+</head>
+<body>
+<h3>JavaScript - Sleep() function</h3>
+
+<script type="text/javascript">
+    // 👉 Example 1
+    // function sleep(milliseconds){
+    //    return new Promise(resolve => setTimeout(resolve, milliseconds));
+    // }
+
+    // async function example(){
+    //     for(let i = 0; i<10;++i){
+    //        await sleep(2000);
+    //         document.writeln(i + " Welcome to JavaScript <br/>");
+    //         console.log(i + " Welcome to JavaScript <br/>");
+    //     }
+    // }
+    // example();
+
+    // 👉 Example 2
+        let sleep = milliseconds => {
+            return new Promise(resolve => setTimeout(resolve,milliseconds));
+        }
+
+        document.writeln("Program Execution started.... <br/>");
+        document.writeln("Welcome to JavaScript <br/>");
+        sleep(5000).then(() => {
+            document.writeln("The program execution is ended...")
+        });
+
+
+</script>
+</body>
+</html>
