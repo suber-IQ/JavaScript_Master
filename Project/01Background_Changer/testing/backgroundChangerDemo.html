@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Background change color</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+    <h3>Background change color</h3>
+    <div class="flex_container">
+        <input type="color" onclick="changeBackgroundColor()">
+    </div>
+
+    <script>
+
+        function changeBackgroundColor(){
+            var color = document.querySelector('input').value;
+            console.log(color);
+            document.body.style.backgroundColor = color;
+        }
+
+    </script>
+</body>
+</html>
