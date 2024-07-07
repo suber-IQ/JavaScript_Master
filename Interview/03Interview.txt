@@ -1,0 +1,68 @@
+Question 11. What are object prototypes?
+-> All javaScript objects inherit properties from a prototype.
+
+For example,
+Date objects inherit properties from the Date prototype
+Math objects inherit properties from the Math prototype
+
+A prototype is a blueprint of an object. Prototype allows us to use properties and methods on an object even if the properties and methods do not exist on the current object.
+
+Question 12. What are callbacks?
+-> A callback is a function that will be executed after function gets executed.
+
+In javaScript, functions are treated as first-class citizens,they can be used as an argument of another function,can be returned by another function and can be used as a property of an object.
+
+Function that are used as an argument to another function are called callback functions.
+
+
+Question 13. What is recursion in a programming language?
+-> Recursion in a technique to iterate over an operation by having a function call itself repeatedly until it arrives at a result.
+
+Example:
+function add(number){
+    if(number <= 0){
+        return 0;
+    }else{
+        return number + add(number - 1);
+    }
+}
+
+add(3);
+
+Question 14. What is the use of a constructor function in javaScript?
+-> Constructor functions are used to objects in javascript.
+
+Example:
+function Person(name,age,gender){
+    this.name = name;
+    this.age = age;
+    this.gender = gender;
+}
+
+var person1 = new Person("Sumit",20,"male");
+console.log(person1);
+
+Question 15. What is Dom?
+-> Dom stands for Document Object Model.
+
+DOM is a programming interface for HTML and XML documents.
+
+When the browser tries to render a HTML document,it creates and object based on the HTML document called DOM. Using this DOM,we can manipulate or Change various elements inside the HTML document.
+
+Question 16. What are arrow functions?
+-> Arrow functions were introduced in the ES6 version of javaScript.They provide us with a new and shorter syntax for declaring functions.Arrow functions can only be used as a function expression.
+
+//Traditional Function expression
+var add = function(a,b){
+    return a + b;
+}
+
+// Arrow Function expression
+var arrowAdd = (a,b) => a + b;
+
+Question 17. Difference between declaring variable using var,let and const
+-> Variables that are declared with the var keyword in the global scope are added to the window/global object.Therefore, they can be accessed using
+window.variableName.
+-> Variable declared with let keyword inside the block scope cannot be accessed from outside of the block.
+-> Variables with the const keyword behave exactly like a variable declared with the let keyword with only one difference, any variable declared with the const keyword cannot be reassigned.
+

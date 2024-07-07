@@ -1,0 +1,29 @@
+Question 18. What is the rest parameter?
+-> Rest parameter (...);
+Using the rest parameter syntax, we can create functions that can take a variable number of arguments.
+
+Example:
+function extractingArgs(...args){
+    return args[1];
+}
+
+Question 19. What is the spread operator?
+-> Spread parameter(...);
+spread operator is used to spread an array, and object literals.
+
+Example:
+function addFourNumbers(num1,num2,num3,num4){
+    return num1 + num2 + num3 + num4;
+}
+
+let fourNumbers = [5,6,7,8];
+
+addFourNumbers(..fourNumbers);
+
+Question 20. What is use of promises in javaScript?
+-> Promises are used to handle asynchronous operations in javaScript.
+Before promises,callbacks were used to handle asynchronous operations. But due to limited functionality of callback, using multiple callbacks to handle asynchronous code can lead to unmanageable code.
+
+-> A promise is created using the Promise constructor which takes in a callback function with two parameters,resovle and reject respectively.
+▶️ resolve is a function that will be called,when the async operation has been successfully completed.
+▶️ reject is a function that will be called,when the async operation fails or if some error occurs.

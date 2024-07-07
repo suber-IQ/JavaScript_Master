@@ -1,0 +1,42 @@
+Question 7. Explain call(),apply() and bind() methods.
+-> call() method allows an object to use the method (function) of another object.
+-> call() method takes arguments separately whereas,apply() method takes arguments as an array.
+-> This method returns a new function, where the value of "this" keyword will be bound to the owner object,which is provided as a parameter.
+
+Question 8.What is currying in JavaScript?
+-> Currying is an advanced technique to transform a function of arguments n,to n functions of one or less arguments.
+
+Example:
+function add(a){
+    return function(b){
+        return a + b;
+    }
+}
+
+add(3)(4)
+
+Question 9. Explain Scope and Scope Chain in JavaScript.
+-> Scope in JS, determines the accessbility of variables and functions at various parts in one's code.
+
+In general terms, the scope will let us know at a given part of code what are the variable and functions that we can or cannot access.
+
+There are three types of scopes in JS:
+Global Scope
+Local or Function Scope
+Block Scope
+
+Question 10. Explain Closures in JavaScript.
+-> Closures is an ability of a function to remember the variables and functions that are declared in its outer scope.
+
+Example:
+function randomFunc(){
+    var obj1 = { name: "Sumit", age: 20};
+
+    return function(){
+        console.log(obj1.name + " is " + " awesome"); //Has access to obj1 even when the randomFunc function is executed
+    }
+}
+
+var initialiseClosure = randomFunc(); //Returns a function
+initialiseClosure();
+

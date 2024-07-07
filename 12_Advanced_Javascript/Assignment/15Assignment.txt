@@ -1,0 +1,7 @@
+Question 1: Write a JavaScript Program to create a Function that ask the use for name and age.Once name and age is entered,have two display methods.Use callbacks to call this methods one after one.
+1. Using alert show the name and age.
+2 Print the name and age on document.
+
+Question 2: Write a JavaScript Program that ask for one number to user and returns the number multipled with 5 using closure method only.
+
+Question 3: Write a JavaScript Program that ask the user to enter his/her date of birth in dd/MMM/YYYY format. Once birthdate is entered, display the age of the user. Make sure the user has entered a proper date. Display appropriate alert message if the date is invalid.

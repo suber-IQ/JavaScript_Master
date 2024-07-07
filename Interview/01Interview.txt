@@ -1,0 +1,64 @@
+Question 1: What are the different data types present in JavaScript?
+-> To know the type of a JavaScript variable, we can use the typeof operator.
+
+Primitive types:
+  ▶️ String
+  ▶️ Number
+  ▶️ BigInt
+  ▶️ Boolean
+  ▶️ Undefined
+  ▶️ Null
+
+Non-Primitive types:
+  ▶️ Object
+  ▶️ Array
+
+Question 2. Explain Hoisting in JavaScript.
+-> Hoisting is a default behavior of JavaScript  where all the variable and function declarations are moved on top.
+
+example:;
+hoistedVariable = 3;
+console.log(hoistedVariable); //ouotputs 3 even when the variable is declared after it is initialized
+
+var hoistedVariable;
+
+Question 3. Difference between "==" and "===" operators.
+-> Both are comparison operators.The Difference between both  the operators is that,"==" is used to compare values whereas, "===" is used to compare both value and types.
+
+Example:
+var x = 2;
+var y = "2";
+(x==y)// Returns true since the value of both x and y is the same.
+(x===y) //Returns false since the typeof x is "number" and typeof y is "string"
+
+Question 4. Is JavaScript a statically typed or a dynamically typed language?
+-> JavaScript is a dynamically typed language. In a dynamically typed language, the type of a variable is checked during run-time in contrast to statically typed language, where the type of a variable is checked during compile-time.
+
+Example:
+var a = 23;
+var a = "Hello World!";
+
+Question  5. What is NaN property in JavaScript?
+-> NaN property represents "Not-a-Number" value.It indicates a value which is not a legal number.Typeof of a NaN will return a Number.To check if a value is NaN,we use the isNaN() function,
+Example:
+isNaN("Hello") //Returns true
+isNaN(345) //Returns false
+isNaN(1) //Returns false,since '1' is converted to Number type which results in 0(a number)
+isNaN(true) //Returns false,since true converted to Number type results in 1 (a Number)
+isNaN(false) //Returns false
+isNaN(undefined) //Returns true
+
+Question 6. Explain "this" keyword.
+-> The "this" keyword refers to the object that the function is a property of.
+
+The value of "this" keyword will always depend on the object that is invoking the function.
+
+Example:
+var obj={
+    name: "Sumit",
+    getName: function(){
+        console.log(this.name);
+    }
+}
+
+obj.getName();

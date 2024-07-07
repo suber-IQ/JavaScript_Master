@@ -1,0 +1,11 @@
+Question 1: Write a JavaScript Program that create a Uint8Array of 8 numbers. Create one more array with values5,8,6,4 Copy first array to another array at positions 2 and print the updated second array using Typedn array's appropriate method.
+
+Question 2: Write a JavaScript Program that create a Uint8Array of 8 numbers. Using TypedArray's appropriate methods get the subarray residing at second position.
+
+Question 3: Write a JavaScript Program to create a set of programming languages of "HTML,CSS,Java".Check if "Python" resides in this set with appropriate method.
+
+Question 4: Write a JavaScript Program to create a Map of programming languages of "HTML,CSS,Java".Print all the values of Map on document. Check if "Python" resides in this set with appropriate method.
+
+Question 5: Write a JavaScript Program to create a  WeakSet of programming languages of "HTML,CSS,Java".Check if "Python" resides in this set with appropriate method. Print all the values of WeakSet on document.Once done delete CSS from the WeakSet and print the values again.
+
+Question 6: Write a JavaScript Program to create a WeakMap of programming languages of "HTML, Css,Java".Print all the values of Map on document.Check if "Python" resides in this set with appropriate method.

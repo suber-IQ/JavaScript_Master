@@ -1,0 +1,15 @@
+Question 1: Write a JavaScript Program have added an external .js file to alert message "Hello JavaScript". Make sure while executing this file, the HTML file is executed first and after that the  .js file.
+
+Question 2: Write a JavaScript Program that redirects to youtube.com using a javascript function and without using <a> tag.
+
+Question 3: Write a JavaScript Program that contains a div of having width 200px and height 200px,with content "Hello Youtube,Youtube is a great place to learn". with fontsize 35px. Make sure to change the background color of the div while the user scrolls inside the div.
+
+Question 4: Write a JavaScript Program to write your name on the screen 5 times after each 3 seconds using custom created sleep method.
+
+Question 5: Write a JavaScript Program has a link named "Click Me!". Make sure that the link wouldn't refresh the page while clicking on it and do not redirect anywhere as well.
+
+Question 6: Write a JavaScript Program and follow below mentiond steps:
+1. Create a login page with username and password fields, submit and signup button.
+2. On click of submit, if the username and password if correct, alert "Login successful" and redirect to "Youtube" website.
+3. On click of signup,redirect the user to a signup page that as controls for Name Email address,Password and Confirm Password.
+4. Provide validations to each control in signup page. if signup is successfull redirect to the youtube page.

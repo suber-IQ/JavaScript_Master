@@ -1,0 +1,56 @@
+Question 21. What are classes in JavaScript?
+-> Introduced in the ES6 version, classes are nothing but syntactic sugars for constructor functions.
+
+They provide a new way of declaring constructor functions in javascript.
+
+class Student{
+    constructor(name,rollName,grade,section){
+        this.name = name;
+    }
+    getDetails(){
+        return 'Name: ${this.name};
+    }
+}
+
+
+Question 22. Explain WeakSet in JavaScript.
+-> In javaScript, Set is a collection of unique and oreder elements.
+
+Just like Set, WeakSet is also a collection of unique and oredered elements with some key differences:
+
+▶️ Weakset contains only objects and no other type.
+▶️ An object inside the weakset is referenced weakly. This means, if the object inside the weakset does no have a reference, it will be garbage collected.
+▶️ Unlike Set, WeakSet only has three methods, add() , delete() and has()
+
+Question 23. Explain WeakMap in JavaScript.
+-> In javascript, Map is used to store key-value pairs. The key-value pairs can be of both primitive and non-primitive types.
+
+WeakMap is similar to Map with key differences:
+
+▶️ The keys and values in weakmap should always be an object.
+▶️ If there are no references to the object, the object will be garbage collected.
+
+Question 24. What is Object Destructuring?
+-> Object destructuring is a new way to extact elements from an object or an array.
+
+Example:
+const classDetails={
+    strength: 78,
+    benches: 39,
+    blackBoard:1
+}
+
+const { strength: classStrength, benches: classBenches blackBoard: classBlackBoard} = classDetails;
+
+console.log(classStrength); //outputs: 78
+console.log(classBenches); //outputs: 39
+console.log(classBlackBoard); //outputs: 1
+
+Question 25. What is a Temporal Dead Zone?
+-> Temporal Dead Zone is a behaviour that occurs with variables declared using let and const keywords.
+
+It is a behaviour where we try to access a variable before it is initialized.
+
+Example:
+x = 23; // Gives reference error
+let x;
