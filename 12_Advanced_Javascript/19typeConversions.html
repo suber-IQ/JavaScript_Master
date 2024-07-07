@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript - Type Conversions</title>
+</head>
+<body>
+<h3>JavaScript - Type Conversions</h3>
+
+<script type="text/javascript">
+    // 👉 Strings to Numbers
+// var pi = "3.14";
+// var a = " ";
+// var b = "";
+// var nan = "85 86";
+
+// document.writeln("<br>converting from string to Number: " + Number(pi)); // 3.14
+// document.writeln('<br> converting from string to Number with space " ": ' + Number(a)); // 0
+// document.writeln('<br>converting from string to Number with space "": ' + Number(b)); // 0
+// document.writeln('<br>converting from string to Number: ' + Number(nan)); // NaN
+
+    // 👉  Number to Strings
+
+//     var pi = 3.14;
+// document.writeln("<br>converting from Number to string: " + pi.toString()); //"3.14"
+// document.writeln("<br>converting from Number to string: " + typeof pi.toString()); // string
+// document.writeln("<br>converting from Number to string: " + (100+100).toString()); // "200"
+// document.writeln("<br>converting from Number to string: " + typeof (100+100).toString()); // string
+
+    // 👉  Dates to Numbers
+
+//     var d = new Date();
+
+// document.writeln("<br>converting from date to Number: " + Number(d)); //  1720337123050 (with changeable)
+
+// document.writeln("<br>converting from date to number: " + d.getTime()); // 1720337123050 (with changeable)
+
+    // 👉  Dates to String
+
+//     var d = new Date().toString();
+
+// document.writeln("<br>converting from date to String: " +d); // Sun Jul 07 2024 12:59:29 GMT+0530 (India Standard Time)
+
+// document.writeln("<br>converting from date to String: " + typeof d); //string
+
+    // 👉  Booleans to Numbers
+
+    document.writeln("<br>converting from boolean to number: " + Number(false)); // 0
+    document.writeln("<br>converting from boolean to number: " + Number(true)); // 1
+
+    // 👉  Booleans to Strings
+
+    document.writeln("<br>converting from boolean to string: " + false.toString()); // "false"
+    document.writeln("<br>converting from boolean to string: " + typeof String(false)); // string
+    document.writeln("<br>converting from boolean to string: " + String(true)); // "true
+    document.writeln("<br>converting from boolean to string: " + typeof true.toString()); // string
+
+
+</script>
+</body>
+</html>
