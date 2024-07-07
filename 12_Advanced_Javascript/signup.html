@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up Page</title>
+</head>
+<body align="center">
+<h4>Create Your Account</h4>
+<table cellspacing="2" align="center" cellpadding="8" border="0">
+<tr>
+    <td>Name</td>
+    <td><input type="text" placeholder="Enter your Name" id="name"></td>
+</tr>
+<tr>
+    <td>Email</td>
+    <td><input type="text" placeholder="Enter your Email" id="email"></td>
+</tr>
+<tr>
+    <td>Password</td>
+    <td><input type="text" placeholder="Enter your Password" id="password"></td>
+</tr>
+<tr>
+    <td>Confirm Password</td>
+    <td><input type="text" placeholder="Confirm Your Password" id="confirmPassword"></td>
+</tr>
+<tr>
+    <td><input type="submit" value="Create" onclick="createAccount()"></td>
+</tr>
+</table>
+
+<script type="text/javascript">
+
+    function createAccount(){
+        var name = document.getElementById("name").value;
+        var email = document.getElementById("email").value;
+        var password = document.getElementById("password").value;
+        var passwordLength = document.getElementById("password").value.length;
+        var confirmPassword = document.getElementById("confirmPassword").value;
+
+        var letters = /^[A-Za-z]+$/;
+        var email_value = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
+
+        if(name == "" || email == "" || password == "" || confirmPassword == ""){
+            alert("Enter all the Details");
+        }else if(!letters.test(name)){
+            alert("Name is incorrect and must contain alphabets only.");
+        }else if(!email_value.test(email)){
+            alert("Email Id is not format");
+        }else if(password != confirmPassword){
+            alert("Password is not matching");
+        }else if(!(passwordLength >= 8)){
+            alert("Maximum length for password must be 8 characters or greater");
+        }else{
+            alert("Your Account has been created Successfully...");
+            // window.location = "18formEvents.html";
+            window.location = "https://www.linkedin.com/in/suberiq";
+        }
+
+
+    }
+
+</script>
+</body>
+</html>
