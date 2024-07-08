@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Counter</title>
+    <style>
+        body{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            text-align: center;
+        }
+      input[type="number"],input[type="button"]{
+        text-align: center;
+        padding: 0.5rem;
+        outline: none;
+        border: 1px solid yellowgreen;
+      }
+      input[type="number"]{
+        width: 2rem;
+        transition: all 0.3s;
+      }
+      input[type="number"]::-webkit-outer-spin-button,
+    input[type="number"]::-webkit-inner-spin-button {
+      -webkit-appearance: none;
+      margin: 0;
+    }
+    </style>
+</head>
+<body>
+    <h3>JavaScript Counter</h3>
+
+    <input type="button" value="inc--" id="decrement">
+    <input type="number" value="0" id="counterValue" >
+    <input type="button" value="inc++" id="increment">
+    <input type="button" value="Reset" id="reset">
+
+    <script type="text/javascript">
+
+      let dec = document.getElementById("decrement");
+      let inc = document.getElementById("increment");
+      let res = document.getElementById("reset");
+      dec.addEventListener("click",decrementFunc);
+      inc.addEventListener("click",incrementFunc);
+      res.addEventListener("click", resetFunc);
+      let countValue = document.getElementById("counterValue");
+
+      function decrementFunc(){
+        if(parseInt(countValue.value) != 0){
+            countValue.value = parseInt(countValue.value) - 1;
+        countValue.style.backgroundColor = "red";
+        countValue.style.color = "white";
+
+        }else{
+            alert("count value is 0 not be negative,try increment");
+        }
+      }
+      function incrementFunc(){
+        countValue.value = parseInt(countValue.value) + 1;
+        countValue.style.backgroundColor = "blue";
+        countValue.style.color = "greenYellow";
+      }
+
+      function resetFunc() {
+                counterValue.value = "0";
+               countValue.style.backgroundColor = "";
+                counterValue.style.color = ''; // Reset color to default
+            }
+
+    </script>
+</body>
+</html>
