@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Counter</title>
+    <style>
+         body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f0f0f0;
+            margin: 0;
+        }
+        .counter-container {
+            text-align: center;
+            background: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .counter {
+            font-size: 48px;
+            margin-bottom: 20px;
+        }
+        .buttons {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        .increment {
+            background-color: #28a745;
+            color: white;
+        }
+        .increment:hover {
+            background-color: #218838;
+        }
+        .decrement {
+            background-color: #dc3545;
+            color: white;
+        }
+        .decrement:hover {
+            background-color: #c82333;
+        }
+        .reset {
+            background-color: #007bff;
+            color: white;
+        }
+        .reset:hover {
+            background-color: #0069d9;
+        }
+    </style>
+</head>
+<body>
+    <div class="counter-container">
+        <div class="counter" id="counter">0</div>
+        <div class="buttons">
+            <button class="increment">Increment</button>
+            <button class="decrement">Decrement</button>
+            <button class="reset">Reset</button>
+        </div>
+    </div>
+
+    <script type="text/javascript">
+
+
+
+
+
+
+//  👉 without test
+
+  let inc = document.querySelector(".increment");
+        let dec = document.querySelector(".decrement");
+        let res = document.querySelector(".reset");
+        let counterValue = document.querySelector(".counter");
+
+        inc.addEventListener("click",incrementFunc);
+        dec.addEventListener("click",decrementFunc);
+        res.addEventListener("click",restFunc);
+
+        function incrementFunc(){
+            counterValue.innerHTML = parseInt(counterValue.innerHTML) + 1;
+        }
+
+        function decrementFunc(){
+            if(parseInt(counterValue.innerHTML) != 0){
+                counterValue.innerHTML = parseInt(counterValue.innerHTML) - 1;
+            }
+
+        }
+        function restFunc(){
+            counterValue.innerHTML = "0"
+        }
+
+
+    </script>
+</body>
+</html>
