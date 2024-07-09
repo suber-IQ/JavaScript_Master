@@ -80,12 +80,21 @@
 
 //  👉 without test
 
-  let inc = document.querySelector(".increment");
+
+//   let inc = document.querySelector(".increment");
         let dec = document.querySelector(".decrement");
         let res = document.querySelector(".reset");
         let counterValue = document.querySelector(".counter");
 
-        inc.addEventListener("click",incrementFunc);
+        // +++++++++++++++++++++++++++++++++++++++++++++
+        // 👉 testing
+        let inc = document.getElementsByClassName("increment");
+        let incButton = Array.from(inc);
+        incButton.forEach(function(button){
+            button.addEventListener("click", incrementFunc);
+        })
+        // +++++++++++++++++++++++++++++++++++++++++++++
+        // inc.addEventListener("click",incrementFunc);
         dec.addEventListener("click",decrementFunc);
         res.addEventListener("click",restFunc);
 
