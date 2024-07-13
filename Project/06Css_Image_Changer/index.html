@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Css Image Changer</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+        <div class="css">
+            <!-- Width  -->
+           <div>
+            <label for="width">Width: </label>
+            <input type="range" id="width" name="width" min="0" max="100" value="50" data-sizing="%">
+           </div>
+            <!-- Border Radius  -->
+           <div>
+            <label for="radius">Border-Radius:</label>
+            <input type="range" id="border-radius" name="border-radius" min="0" max="100" value="5" data-sizing="px">
+           </div>
+            <!-- Base Color  -->
+           <div>
+            <label for="base">Base Color:</label>
+            <input type="color" id="base" name="base" value="#ffff00">
+           </div>
+            <!-- Padding  -->
+           <div>
+            <label for="padding">Padding:</label>
+            <input type="range" name="padding" id="padding" min="0" max="100" value="2" data-sizing="px">
+           </div>
+            <!-- Blur  -->
+           <div>
+            <label for="blur">Blur:</label>
+            <input type="range" name="blur" id="blur" min="0" max="100" value="40" data-sizing="px">
+           </div>
+
+        </div>
+        <img src="Pizza-store.jpg" alt="pizza-store">
+    </div>
+
+
+
+
+    <script src="script.js"></script>
+</body>
+</html>
