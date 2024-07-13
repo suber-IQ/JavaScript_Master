@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Add or Remove input Filed</title>
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        background-color: #27e4be;
+      }
+
+      .section{
+        background-color: blueviolet;
+        padding: 1rem;
+        border-radius: 0.5rem;
+      }
+       #survey_options{
+        max-height: 200px; /* Adjust the height as needed */
+        display: flex;
+        flex-direction: column;
+        overflow-y: auto;
+        padding-right: 10px;
+      }
+
+     #survey_options::-webkit-scrollbar-track {
+        -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+        background-color: #f5f5f5;
+        border-radius: 10px;
+      }
+
+      #survey_options::-webkit-scrollbar {
+        width: 10px;
+        background-color: #f5f5f5;
+      }
+
+      #survey_options::-webkit-scrollbar-thumb {
+        border-radius: 10px;
+        background-image: -webkit-gradient(
+          linear,
+          left bottom,
+          left top,
+          color-stop(0.44, rgb(122, 153, 217)),
+          color-stop(0.72, rgb(73, 125, 189)),
+          color-stop(0.86, rgb(28, 58, 148))
+        );
+      }
+
+
+      .section #survey_options > input{
+        border: 1px solid transparent;
+        padding: 0.3rem 1rem;
+        margin: 0.5rem 0;
+        border-radius: 0.3rem;
+        font-size: 1rem;
+        transition: all 0.3s ease;
+        width: 100%;
+      }
+      .section #survey_options > input:focus{
+        border: 1px solid yellowgreen;
+        outline: none;
+        box-shadow: 0 0 8px rgba(154, 205, 50, 0.6);
+          background-color: #f9fff2;
+      }
+
+
+      .section > .controls {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        margin-top: 1rem;
+      }
+      .section > .controls > a {
+        padding: 0.3rem 1rem;
+        border-radius: 0.2rem;
+        text-decoration: none;
+        font-size: 1.2rem;
+        font-weight: 600;
+        border: 2px solid transparent;
+        transition: all 0.3s;
+        color: rgb(232, 226, 226);
+      }
+      .section > .controls > a:hover {
+        border: 2px solid rgb(207, 207, 53);
+
+      }
+      .section > .controls > a:nth-child(1) {
+        background-color: green;
+      }
+      .section > .controls > a:nth-child(2) {
+        background-color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="section">
+      <div id="survey_options">
+        <input
+          type="text"
+          placeholder="Name"
+          name="survey_options"
+          class="survey_options"
+          size="50"
+        />
+        <input
+          type="text"
+          placeholder="Email"
+          name="survey_options"
+          class="survey_options"
+          size="50"
+        />
+        <input
+          type="text"
+          placeholder="Address"
+          name="survey_options"
+          class="survey_options"
+          size="50"
+        />
+
+      </div>
+      <div class="controls">
+        <a href="#" id="add_fields">Add</a>
+        <a href="#" id="remove_fields">Remove</a>
+      </div>
+    </div>
+
+    <script type="text/javascript">
+
+        let survey_options = document.getElementById("survey_options");
+        let add = document.getElementById("add_fields");
+        let remove = document.getElementById("remove_fields");
+
+        add.onclick = function() {
+            let field = document.createElement("input");
+            let tags = survey_options.getElementsByTagName("input");
+
+            field.setAttribute("type", "text");
+            field.setAttribute("name", "survey_options");
+            field.setAttribute("class", "survey_options");
+            field.setAttribute("size", "50");
+            field.setAttribute("placeholder", "other field");
+            survey_options.appendChild(field);
+
+            //scroll to bottom of the counter
+            survey_options.scrollTop = survey_options.scrollHeight;
+            if(tags.length >= 2){
+                document.getElementById("remove_fields").style.visibility = "visible"
+            }
+        }
+        remove.onclick=function(){
+            var tags = survey_options.getElementsByTagName("input");
+            if(tags.length >= 2){
+                survey_options.removeChild(tags[(tags.length) - 1]);
+
+            }
+            if(tags.length < 2){
+                    remove.style.visibility = "hidden"
+            }
+        }
+
+    </script>
+  </body>
+</html>
