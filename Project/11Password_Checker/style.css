@@ -1,0 +1,28 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: rgba(153, 205, 50, 0.77);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+#password{
+ width: 350px;
+ padding: 12px;
+ font-size: 1.3rem;
+ background-color: antiquewhite;
+ border: 2px solid #000;
+ outline-color: blue;
+ border-radius: 5px;
+ margin-bottom: 10px;
+}
+#output{
+    background-color: rgb(245, 230, 202,0.6);
+    border-radius: 0.2rem;
+}
