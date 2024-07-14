@@ -1,0 +1,19 @@
+
+1️⃣ Fahrenheit to Celsius:
+Celsius=(Fahrenheit−32)× 5/9
+​
+2️⃣ Celsius to Fahrenheit:
+Fahrenheit=Celsius× 9/5 + 32
+
+3️⃣ Kelvin to Celsius:
+​Celsius=Kelvin−273.15
+
+4️⃣ Celsius to Kelvin:
+Kelvin=Celsius+273.15
+
+5️⃣Kelvin to Fahrenheit:
+Fahrenheit=(Kelvin−273.15) * 9/5 + 32
+
+6️⃣ Fahrenheit to Kelvin:
+Kelvin=(Fahrenheit−32)× 5/9 + 273.15
+​
