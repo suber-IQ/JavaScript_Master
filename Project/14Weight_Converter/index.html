@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weight Converter</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body{
+            background-color: antiquewhite;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+
+        .container{
+            background-color: violet;
+            padding: 20px;
+            border-radius: 10px;
+            width: 50%;
+        }
+        .header > h3{
+            text-align: center;
+            font-size: 1.5rem;
+            margin-bottom: 20px;
+        }
+        #weight-input{
+            font-size: 1.3rem;
+            border: none;
+            padding: 20px;
+            width: 100%;
+            outline-color: blue;
+        }
+        .output{
+          display: block;
+          width: 100%;
+          margin-top: 20px;
+          padding: 10px;
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="header">
+            <h3>Weight Converter Pound</h3>
+        </div>
+        <div class="weight-field">
+            <input type="number" id="weight-input" placeholder="Enter Your Weight in Kg">
+        </div>
+            <h3 class="output">
+
+            </h3>
+    </div>
+
+
+    <script>
+        const Weight = document.getElementById("weight-input");
+        const output = document.querySelector(".output");
+
+        Weight.addEventListener("input", () => {
+            let pound = Weight.value * 2.20462
+            let fixPound = pound.toFixed(2);
+            output.innerHTML = `Weight to Pound : ${fixPound}`;
+        })
+    </script>
+</body>
+</html>
