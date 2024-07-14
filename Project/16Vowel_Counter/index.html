@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vowel Counter</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+            background-color: lightgray;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+        .container{
+            background-color: whitesmoke;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+            padding: 20px;
+            text-align: center;
+        }
+        .header > h3{
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+            color: darkcyan;
+        }
+         #textarea{
+            border: 1px solid orangered;
+            padding: 10px;
+            outline-color: blueviolet;
+            margin-bottom: 10px;
+        }
+        #count-btn{
+            border: none;
+            padding: 10px;
+            background-color: yellowgreen;
+            border-radius: 5px;
+            margin-bottom: 10px;
+        }
+        #output{
+           color: darkgoldenrod;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="header">
+            <h3>Vowel Counter</h3>
+        </div>
+        <div class="textarea">
+            <textarea name="text" id="textarea" rows="10" cols="30" placeholder="Enter Text here!"></textarea>
+        </div>
+        <div class="count-btn">
+            <button id="count-btn">Check Count</button>
+        </div>
+        <div class="output">
+            <h3 id="output"></h3>
+        </div>
+    </div>
+
+    <script type="text/javascript">
+        let textArea = document.getElementById("textarea");
+        let countBtn = document.getElementById("count-btn");
+        let output = document.getElementById("output");
+
+        countBtn.addEventListener("click", () => {
+            if(textArea.value === ''){
+                output.innerHTML = "Please enter some text";
+            }else{
+                // aeiou
+                const val = (textArea.value).toLowerCase();
+                let count = 0;
+                for(let i = 0; i < val.length; i++){
+                    if(val[i] == 'a' || val[i] === 'e' || val[i] === 'i' || val[i] === 'o' || val[i] === 'u'){
+                        count++;
+                    }
+                }
+                output.innerHTML = `Total vowel count: ${count}`
+            }
+        })
+
+
+    </script>
+</body>
+</html>
