@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CountDown to New Year</title>
+    <style>
+       *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+       }
+       body{
+        background-color: antiquewhite;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+       }
+       .container{
+        background-color: white;
+        width: 350px;
+        border-radius: 10px;
+        text-align: center;
+        box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5);
+       }
+       .header{
+        background-color: purple;
+        padding: 20px;
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+        color: #fff;
+       }
+       .next-year{
+        font-size: 2rem;
+        font-weight: bold;
+        color: darkgoldenrod;
+        margin-bottom: 10px;
+
+       }
+       .counter{
+        display: flex;
+        justify-content: space-around;
+        background-color: purple;
+        color: #fff;
+        border-bottom-left-radius: 10px;
+        border-bottom-right-radius: 10px;
+        padding: 10px;
+       }
+    </style>
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+        <h1>New Year Counter</h1>
+    </div>
+    <div class="next-year">
+        <h1 id="next-year">
+            2025
+        </h1>
+    </div>
+    <div class="counter">
+        <div class="days">
+            <h1 id="days">00</h1>
+            <h3>Days</h3>
+        </div>
+        <div class="hours">
+            <h1 id="hours">00</h1>
+            <h3>Hours</h3>
+        </div>
+        <div class="minutes">
+            <h1 id="minutes">00</h1>
+            <h3>Minutes</h3>
+        </div>
+        <div class="seconds">
+            <h1 id="seconds">00</h1>
+            <h3>Seconds</h3>
+        </div>
+    </div>
+  </div>
+
+
+  <script type="text/javascript">
+// Set the date we're counting down to
+const countDownDate = new Date("Jan 1, 2025 00:00:00").getTime();
+// console.log(countDownDate);
+
+// Update the count down every 1 second
+const x = setInterval(function() {
+
+  // Get today's date and time
+  const now = new Date().getTime();
+//   console.log(now);
+
+  // Find the distance between now and the count down date
+  const distance = countDownDate - now;
+//   const distance = -1;
+
+  // Time calculations for days, hours, minutes and seconds
+  const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+  const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+  const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+  // Display the result in the corresponding elements
+  document.getElementById("days").innerText = days;
+  document.getElementById("hours").innerText = hours;
+  document.getElementById("minutes").innerText = minutes;
+  document.getElementById("seconds").innerText = seconds;
+
+  // If the count down is finished, write some text
+  if (distance < 0) {
+    clearInterval(x);
+    document.querySelector(".counter").innerHTML = "HAPPY NEW YEAR!";
+  }
+}, 1000);
+  </script>
+</body>
+</html>
