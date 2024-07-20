@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random Color Palette Generator</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+            padding: 20px;
+            background-color: aqua;
+        }
+
+        .container{
+            display: flex;
+            justify-content: space-evenly;
+            text-align: center;
+            gap: 5px;
+            flex-wrap: wrap;
+        }
+        .color-card{
+            /* background-color: red; */
+            padding: 10px;
+            border-radius: 0.2rem;
+            width: 220px;
+            height: 120px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+        }
+        .copy-btn{
+            background-color: #333;
+            color: #fff;
+            border: none;
+            padding: 5px 10px;
+            font-size: 14px;
+            cursor: pointer;
+        }
+        .copy-btn:hover{
+            background-color: #444;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+
+    </div>
+
+
+    <script>
+
+        const container = document.querySelector(".container");
+
+        const haxCode = "0123456789ABCDEF";
+        for(let i = 0;  i< 60; i++){
+            const box = document.createElement("div");
+            box.classList.add("color-card");
+            let color = "#";
+            for(let j = 0; j < 6; j++){
+               color += haxCode[getRandom()];
+            }
+            box.textContent = color;
+            box.style.backgroundColor = color;
+
+            const copyBtn = document.createElement("button");
+            copyBtn.classList.add("copy-btn");
+            copyBtn.textContent = "Copy";
+            copyBtn.addEventListener("click", () => {
+                navigator.clipboard.writeText(color);
+                alert(`Copied to clipboard: ${color}`);
+            });
+
+            box.appendChild(copyBtn);
+            container.appendChild(box);
+        }
+
+        function getRandom(){
+            return Math.floor(Math.random() * 16);
+        }
+
+    </script>
+
+</body>
+</html>
