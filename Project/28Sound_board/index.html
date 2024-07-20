@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sound Board</title>
+    <style>
+        * {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: antiquewhite;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+button{
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: aquamarine;
+    font-size: 18px;
+    cursor: pointer;
+    margin: 5px;
+}
+
+button:hover{
+    background-color: #00ff7f;
+}
+    </style>
+</head>
+<body>
+
+    <audio src="audio/applause.mp3" id="audio-applause"></audio>
+    <audio src="audio/boo.mp3" id="audio-boo"></audio>
+    <audio src="audio/gasp.mp3" id="audio-gasp"></audio>
+    <audio src="audio/tada.mp3" id="audio-tada"></audio>
+    <audio src="audio/victory.mp3" id="audio-victory"></audio>
+    <audio src="audio/wrong.mp3" id="audio-wrong"></audio>
+
+    <div class="buttons">
+        <button onclick="sound('audio-applause')">Applause</button>
+        <button onclick="sound('audio-boo')">Boo</button>
+        <button onclick="sound('audio-gasp')">Gasp</button>
+        <button onclick="sound('audio-tada')">Tada</button>
+        <button onclick="sound('audio-victory')">Victory</button>
+        <button onclick="sound('audio-wrong')">Wrong</button>
+    </div>
+
+
+    <script>
+       let currentAudio = null;
+
+function sound(audioId) {
+    if (currentAudio) {
+        currentAudio.pause();
+        currentAudio.currentTime = 0;
+    }
+
+    currentAudio = document.getElementById(audioId);
+    if (currentAudio) {
+        currentAudio.play().then(() => {
+            console.log('Playing:', audioId);
+        }).catch(error => {
+            console.error('Error playing audio:', error);
+        });
+    }
+}
+    </script>
+
+</body>
+</html>
