@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dictionary</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body{
+            background-color: goldenrod;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .container{
+            width: 350px;
+            background-color: #fff;
+            padding: 15px 20px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.2);
+            /* width: 450px; */
+            text-align: center;
+            border-radius: 5px;
+        }
+        .header > h1{
+            margin-bottom: 20px;
+            color: purple;
+            font-size: 1.9rem;
+        }
+        .input-search > input{
+            width: 100%;
+            padding: 10px 15px;
+            outline-color: aqua;
+            margin-bottom: 10px;
+        }
+        .input-search > button{
+            padding: 6px 15px;
+            background-color: goldenrod;
+            color: #fff;
+            font-size: 1.2rem;
+            border: none;
+            border-radius: 5px;
+            transition: all 0.3s ease-in;
+        }
+        .input-search > button:hover{
+            transform: translateY(3px);
+            color: darkgreen;
+            background-color: greenyellow;
+        }
+        .output{
+            margin-top: 10px;
+            max-height: 110px;
+
+        }
+        #meaning{
+            overflow-wrap: break-word;
+        }
+    </style>
+</head>
+<body>
+
+  <div class="container">
+    <div class="header">
+        <h1>Dictionary App</h1>
+    </div>
+    <div class="input-search">
+        <input type="text" id="input" placeholder="Enter a word..." maxlength="50">
+        <button id="search">Search</button>
+    </div>
+    <div class="output">
+        <p id="meaning">
+            Meaning will be display here...
+        </p>
+    </div>
+  </div>
+
+
+    <script>
+        const input = document.getElementById("input");
+        const output = document.getElementById("meaning");
+        const search = document.getElementById("search");
+
+        search.addEventListener("click", async () => {
+            const val = input.value;
+            if(val === ""){
+                alert("Please enter a word");
+            }else{
+                const url = `https://api.dictionaryapi.dev/api/v2/entries/en/${val}`;
+                let meaning = await fetch(url);
+                let data = await meaning.json();
+                // console.log(meaning);
+                const meaningOfInput = data[0].meanings[0].definitions[0].definition;
+                output.innerText = meaningOfInput;
+            }
+        })
+    </script>
+</body>
+</html>
