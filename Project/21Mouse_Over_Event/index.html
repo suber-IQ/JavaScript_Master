@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MouseOver Event</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: antiquewhite;
+        }
+        .container{
+            padding: 20px;
+            display: flex;
+            gap: 20px;
+        }
+        .heading{
+            font-size: 1.8rem;
+            text-align: center;
+            color: darkgreen;
+        }
+        .show-content{
+            border: 1px solid grey;
+            padding: 1.5rem 2rem;
+            text-align: center;
+            margin-top: 10px;
+            color: blue;
+            font-size: 1.8rem;
+            width: 250px;
+            background-color: yellowgreen;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+         <div class="display">
+            <h3 class="heading">Mouse X Position</h3>
+            <div class="show-content" id="xMouse">234</div>
+         </div>
+         <div class="display">
+            <h3 class="heading">Mouse Y Position</h3>
+            <div class="show-content" id="yMouse">154</div>
+         </div>
+    </div>
+
+    <script>
+        let xMouse = document.getElementById("xMouse");
+        let yMouse = document.getElementById("yMouse");
+
+
+        window.addEventListener("mouseover", (event) => {
+            let xAxis = event.clientX;
+            let yAxis = event.clientY;
+            xMouse.textContent = xAxis;
+            yMouse.textContent = yAxis;
+        })
+    </script>
+</body>
+</html>
