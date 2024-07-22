@@ -1,0 +1,14 @@
+Major Project (Js + Typescript) coming soon
+
+1. Netflix or HotStar or any streaming app
+2. Music Player (like gaana,jio savan)
+3. Ecommerce (like myntra or flipkart or amazon)
+4. Online Learning Platform
+5. Social Media
+6. Blog Platfrom
+7. Drawing App
+8. Canvas (ui & Ux application)
+9. pizza store application (Food Application)
+10. BookMyShow
+
+

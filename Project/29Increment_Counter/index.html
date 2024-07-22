@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Increment Counter</title>
+<!--Get your code at fontawesome.com-->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body{
+            background-color: antiquewhite;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+        .container{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 3rem;
+        }
+        .container-counter{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            background-color: #fff;
+            padding: 2rem 1rem;
+            border-radius: 5px;
+            font-size: 1.2rem;
+            box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5);
+            gap: 10px;
+        }
+        .container-counter > i{
+            font-size: 2.2rem;
+            color: rgb(97, 128, 36);
+
+        }
+
+        .container-counter > div{
+            color: green;
+            font-weight: bold;
+            letter-spacing: 1px;
+        }
+        .container-counter > span{
+            color: darkorchid;
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="container-counter">
+            <i class="fa-brands fa-youtube"></i>
+            <div class="counter" data-target="10000">10000</div>
+            <span>Youtube Followers</span>
+        </div>
+        <div class="container-counter">
+            <i class="fa-brands fa-x-twitter"></i>
+            <div class="counter" data-target="6000">6000</div>
+            <span>Twitter Followers</span>
+        </div>
+        <div class="container-counter">
+            <i class="fa-brands fa-square-instagram"></i>
+            <div class="counter" data-target="8000">8000</div>
+            <span>Instagram Followers</span>
+        </div>
+    </div>
+
+
+    <script>
+        const counters = document.querySelectorAll(".counter");
+
+        counters.forEach(counter => {
+            counter.innerText = '0';
+            let target = +counter.getAttribute('data-target');
+            let count = 0;
+            function incrementConter(){
+                if(count < target){
+                    count++;
+                    counter.innerText = count;
+                    setInterval(incrementConter, 100);
+                }else{
+                    counter.innerText = target;
+                }
+            }
+            incrementConter();
+        })
+
+    </script>
+</body>
+</html>
