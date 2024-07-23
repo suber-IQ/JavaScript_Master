@@ -1,0 +1,68 @@
+/* //Tablet  */
+
+/* 👉  side bar */
+
+/* .sidebar.open {
+  transform: translateX(0);
+}
+
+.section_first {
+  padding: 20px;
+}
+
+.auth {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 1.8rem;
+}
+.auth > span {
+  font-size: 1.1rem;
+}
+.auth > .authentication > a {
+  font-size: 1.2rem;
+}
+.main_section > ul {
+  gap: 30px;
+}
+.main_section > ul > li > a {
+  font-size: 1.2rem;
+}
+
+
+.main_section > ul li:last-child > a > .toggle-off {
+  font-size: 2rem;
+}
+
+.go_premium {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+.go_premium > h2 {
+  font-size: 1.5rem;
+}
+.go_premium > a {
+  font-size: 1.18rem;
+}
+.go_premium > .offer {
+  font-size: 1.1rem;
+}
+.go_premium > .offer > span:first-child {
+  font-size: 1.09rem;
+}
+.section_third {
+  padding: 20px;
+}
+
+.section_third > .quick_access > h2 {
+  font-size: 1.5rem;
+}
+.section_third > .quick_access > ul {
+  margin-top: 2rem;
+  gap: 30px;
+}
+.section_third > .quick_access > ul > li > a {
+  font-size: 1.2rem;
+}
+ */

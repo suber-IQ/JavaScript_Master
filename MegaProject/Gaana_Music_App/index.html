@@ -1,0 +1,601 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gaana App</title>
+    <link rel="stylesheet" href="index.css" />
+    <script src="index.js" defer></script>
+    <!-- //font-awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <!-- Slick Slider -->
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"
+    />
+  </head>
+  <body>
+    <!-- //🌐 header  -->
+    <section class="header">
+      <header>
+        <div class="row">
+          <div class="menu_btn" id="menu-toggle">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+          <div class="logo">
+            <img src="./assets/images/gaana.svg" alt="logo" />
+          </div>
+          <div class="language">
+            Hindi,Engli... <span><i class="fa-solid fa-chevron-down"></i></span>
+          </div>
+          <div class="search_bar">
+            <div class="input_field">
+              <span><i class="fa-solid fa-magnifying-glass"></i></span>
+              <input type="text" placeholder="Search Artists, Songs, Albums" />
+            </div>
+          </div>
+        </div>
+        <div class="sidebar">
+          <div class="col">
+            <div class="section_first">
+              <div class="auth">
+                <span><i class="fa-regular fa-user"></i></span>
+                <div class="authentication">
+                  <a href="#">Login / Sign Up</a>
+                </div>
+              </div>
+              <div class="main_section">
+                <ul>
+                  <li><a href="#">Home</a></li>
+                  <li><a href="#">Radio</a></li>
+                  <li><a href="#">Podcast</a></li>
+                  <li><a href="#">My Music</a></li>
+                  <li><a href="#">Language</a></li>
+                  <li>
+                    <a href="#">
+                      <span>Night Mode</span>
+                      <span class="toggle-off"
+                        ><i class="fa-solid fa-toggle-off"></i
+                      ></span>
+                      <span style="display: none"
+                        ><i class="fa-solid fa-toggle-on"></i
+                      ></span>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <hr />
+            <div class="section_second">
+              <div class="go_premium">
+                <h2>Go Premium</h2>
+                <a href="#">Get Gaana Plus</a>
+                <div class="offer">
+                  <span>Welcome Offer</span>
+                  <span>1 Month Trial @ Just ₹1</span>
+                </div>
+              </div>
+            </div>
+            <hr />
+            <div class="section_third">
+              <div class="quick_access">
+                <h2>Quick Access</h2>
+                <ul>
+                  <li><a href="#">Trending Songs</a></li>
+                  <li><a href="#">New Songs</a></li>
+                  <li><a href="#">Old Songs</a></li>
+                  <li><a href="#">Album </a></li>
+                  <li><a href="#">Artist</a></li>
+                  <li><a href="#">Lyrics</a></li>
+                  <li><a href="#">Music Labels</a></li>
+                  <li><a href="#">Genres</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+    </section>
+
+    <!-- //🌐 Naviagation Link  -->
+
+    <section class="navigation_link">
+      <nav>
+        <div class="row">
+          <ul>
+            <li><a href="#">All</a></li>
+            <li><a href="#">Trending Songs</a></li>
+            <li><a href="#">New Songs</a></li>
+            <li><a href="#">Old Songs</a></li>
+            <li>
+              <a href="#">
+                <span>Moods & Genres</span>
+                <span><i class="fa-solid fa-chevron-down"></i></span>
+              </a>
+            </li>
+            <li><a href="#">Album</a></li>
+            <li>
+              <a href="#">
+                <span>Top Playlist</span>
+                <span><i class="fa-solid fa-chevron-down"></i></span>
+              </a>
+            </li>
+            <li><a href="#">Radio</a></li>
+            <li><a href="#">Podcast</a></li>
+            <li><a href="#"> My Music</a></li>
+          </ul>
+        </div>
+      </nav>
+    </section>
+
+    <!-- //🌐 Carousel slide  -->
+    <section class="js_carousel container">
+      <div class="slider">
+        <img
+          src="https://a10.gaanacdn.com/gn_img/showcase/9MAWe7KyJe/MAWewwGKyJ/size_s_1718277381.webp"
+          alt=""
+        />
+      </div>
+      <div class="slider">
+        <img
+          src="https://a10.gaanacdn.com/gn_img/showcase/2lV3dl13Rg/lV3ddRo3Rg/size_s_1720555332.webp"
+          alt=""
+        />
+      </div>
+      <div class="slider">
+        <img
+          src="https://a10.gaanacdn.com/gn_img/showcase/XzVWRyL3dq/zVWRBR1Wdq/size_s_1720690597.webp"
+          alt=""
+        />
+      </div>
+      <div class="slider">
+        <img
+          src="https://a10.gaanacdn.com/gn_img/showcase/lJvKa56KDV/JvKadDQbDV/size_s_1721174777.webp"
+          alt=""
+        />
+      </div>
+    </section>
+
+    <!-- //🌐 Recently Played  -->
+
+    <section class="recently_played container">
+      <div class="col">
+        <div class="heading">
+          <h2>Recently Played</h2>
+          <a href="#">See All</a>
+        </div>
+        <div class="recent">
+          <div class="play_wrapper">
+            <div class="main_content">
+              <img
+                src="https://a10.gaanacdn.com/gn_img/albums/ZaP37OR3Dy/P374ABa9WD/size_m.jpg"
+                alt="song"
+              />
+              <div class="title">
+                <span>Nlkat (From "kill")</span>
+                <span>Nlkat (From "kill")</span>
+              </div>
+            </div>
+            <div class="more">
+              <span><i class="fa-solid fa-ellipsis-vertical"></i></span>
+            </div>
+          </div>
+          <div class="play_wrapper">
+            <div class="main_content">
+              <img
+                src="https://a10.gaanacdn.com/gn_img/albums/JD2KJyAbOL/2KJ5q1GAbO/size_m.jpg"
+                alt="song"
+              />
+              <div class="title">
+                <span>Sajni</span>
+                <span>Laapataa Ladies</span>
+              </div>
+            </div>
+            <div class="more">
+              <span><i class="fa-solid fa-ellipsis-vertical"></i></span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- //🌐 Offer Section  -->
+    <section class="offer container">
+      <div class="row">
+        <a href="#">
+          <img
+            src="https://a10.gaanacdn.com/images/section/MWEB-Home-Rs1-new_1719767737.png"
+            alt=""
+          />
+        </a>
+        <a href="#">
+          <img
+            src="https://a10.gaanacdn.com/images/section/Web-Home-Rs1-new_1719768045.jpg"
+            alt=""
+          />
+        </a>
+      </div>
+    </section>
+
+    <!-- //🌐 Top Charts (Custom Play)  -->
+    <section class="custom_play container">
+      <div class="row">
+        <div class="heading">
+          <h2>Top Charts</h2>
+          <a href="#">See All</a>
+        </div>
+        <div class="main_content">
+          <div class="wrapper">
+            <div class="play_content">
+              <img
+                src="https://a10.gaanacdn.com/gn_pl_img/playlists/P7m3GNKqxo/7m3GQwOybq/size_m_1721644795.webp"
+                alt="charts"
+              />
+              <span class="play_icon">
+                <i class="fa-solid fa-play"></i>
+              </span>
+            </div>
+            <span class="title">Hindi Top 50</span>
+          </div>
+          <div class="wrapper">
+            <div class="play_content">
+              <img
+                src="https://a10.gaanacdn.com/gn_pl_img/playlists/zLp36v3rGe/Lp36kP5NWr/size_m_1720422436.webp"
+                alt="charts"
+              />
+              <span class="play_icon">
+                <i class="fa-solid fa-play"></i>
+              </span>
+            </div>
+            <span class="title">Hindi Romance Top</span>
+          </div>
+          <div class="wrapper">
+            <div class="play_content">
+              <img
+                src="https://a10.gaanacdn.com/gn_pl_img/playlists/zLp36PvbrG/p36EzPv0Kr/size_m_1719489332.webp"
+                alt="charts"
+              />
+              <span class="play_icon">
+                <i class="fa-solid fa-play"></i>
+              </span>
+            </div>
+            <span class="title">Punjabi All Time Top</span>
+          </div>
+          <div class="wrapper">
+            <div class="play_content">
+              <img
+                src="https://a10.gaanacdn.com/gn_pl_img/playlists/Bp1bAnK029/p1bApy9XW0/size_m_1718178024.webp"
+                alt="charts"
+              />
+              <span class="play_icon">
+                <i class="fa-solid fa-play"></i>
+              </span>
+            </div>
+            <span class="title">Hindi Dance Top 50</span>
+          </div>
+          <div class="wrapper">
+            <div class="play_content">
+              <img
+                src="https://a10.gaanacdn.com/gn_pl_img/playlists/P7m3GNKqxo/7m3GQwOybq/size_m_1721644795.webp"
+                alt="charts"
+              />
+              <span class="play_icon">
+                <i class="fa-solid fa-play"></i>
+              </span>
+            </div>
+            <span class="title">Hindi Top 50</span>
+          </div>
+          <div class="wrapper">
+            <div class="play_content">
+              <img
+                src="https://a10.gaanacdn.com/gn_pl_img/playlists/zLp36PvbrG/p36EzPv0Kr/size_m_1719489332.webp"
+                alt="charts"
+              />
+              <span class="play_icon">
+                <i class="fa-solid fa-play"></i>
+              </span>
+            </div>
+            <span class="title">Punjabi All Time Top</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- //🌐Feautred Artist  -->
+    <section class="artist container">
+      <div class="row">
+        <div class="heading">
+          <h2>Featured Artists</h2>
+        </div>
+        <div class="wrapper">
+          <a href="#" class="main_content">
+            <img
+              src="https://a10.gaanacdn.com/gn_img/artists/21GWwrR3pk/1GWwYz4DKp/size_m_1717412444.webp"
+              alt="artists"
+            />
+            <h5>Tanishk Bagchi</h5>
+          </a>
+          <a href="#" class="main_content">
+            <img
+              src="https://a10.gaanacdn.com/gn_img/artists/6Zxb2r7b9w/Zxb2xp0w39/size_m_1720177985.webp"
+              alt="artists"
+            />
+            <h5>B Praak</h5>
+          </a>
+          <a href="#" class="main_content">
+            <img
+              src="https://a10.gaanacdn.com/gn_img/artists/6Zxb2r7b9w/Zxb2xp0w39/size_m_1720177985.webp"
+              alt="artists"
+            />
+            <h5>B Praak</h5>
+          </a>
+          <a href="#" class="main_content">
+            <img
+              src="https://a10.gaanacdn.com/gn_img/artists/6Zxb2r7b9w/Zxb2xp0w39/size_m_1720177985.webp"
+              alt="artists"
+            />
+            <h5>B Praak</h5>
+          </a>
+          <a href="#" class="main_content">
+            <img
+              src="	https://a10.gaanacdn.com/gn_img/artists/10q3ZR1352/0q3Z6Lg135/size_m_1716892887.webp"
+              alt="artists"
+            />
+            <h5>Jubin Nautiyal</h5>
+          </a>
+          <a href="#" class="main_content">
+            <img
+              src="	https://a10.gaanacdn.com/gn_img/artists/10q3ZR1352/0q3Z6Lg135/size_m_1716892887.webp"
+              alt="artists"
+            />
+            <h5>Jubin Nautiyal</h5>
+          </a>
+          <a href="#" class="main_content">
+            <img
+              src="	https://a10.gaanacdn.com/gn_img/artists/10q3ZR1352/0q3Z6Lg135/size_m_1716892887.webp"
+              alt="artists"
+            />
+            <h5>Jubin Nautiyal</h5>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- //🌐 Trending Songs (Custom Play)  -->
+    <section class="custom_play container">
+      <div class="row">
+        <div class="heading">
+          <h2>Trending Songs</h2>
+          <a href="#">See All</a>
+        </div>
+        <div class="main_content">
+          <div class="wrapper">
+            <div class="play_content">
+              <img
+                src="https://a10.gaanacdn.com/gn_img/albums/jBr3gybR1m/r3gerl49bR/size_m_1719911865.jpg"
+                alt="charts"
+              />
+              <span class="play_icon">
+                <i class="fa-solid fa-play"></i>
+              </span>
+            </div>
+            <span class="title">Tauba Tauba (From "Bad Newz")</span>
+          </div>
+          <div class="wrapper">
+            <div class="play_content">
+              <img
+                src="https://a10.gaanacdn.com/gn_pl_img/playlists/zLp36v3rGe/Lp36kP5NWr/size_m_1720422436.webp"
+                alt="charts"
+              />
+              <span class="play_icon">
+                <i class="fa-solid fa-play"></i>
+              </span>
+            </div>
+            <span class="title">Hindi Romance Top</span>
+          </div>
+          <div class="wrapper">
+            <div class="play_content">
+              <img
+                src="https://a10.gaanacdn.com/gn_img/albums/MmqK5EKwRO/qK5ZDYll3w/size_m.jpg"
+                alt="charts"
+              />
+              <span class="play_icon">
+                <i class="fa-solid fa-play"></i>
+              </span>
+            </div>
+            <span class="title">Haye Jullet (From "Jatt & Jullet")</span>
+          </div>
+          <div class="wrapper">
+            <div class="play_content">
+              <img
+                src="https://a10.gaanacdn.com/gn_img/albums/ogNWkLDbmX/NWkl5pLJbm/size_m.jpg"
+                alt="charts"
+              />
+              <span class="play_icon">
+                <i class="fa-solid fa-play"></i>
+              </span>
+            </div>
+            <span class="title">Angaaron (From "Pushpa 2")</span>
+          </div>
+          <div class="wrapper">
+            <div class="play_content">
+              <img
+                src="https://a10.gaanacdn.com/gn_img/albums/g4w3vwrWjJ/w3v50nQAKj/size_m.jpg"
+                alt="charts"
+              />
+              <span class="play_icon">
+                <i class="fa-solid fa-play"></i>
+              </span>
+            </div>
+            <span class="title">Tainu khabar Nahi (From "Munju")</span>
+          </div>
+          <div class="wrapper">
+            <div class="play_content">
+              <img
+                src="https://a10.gaanacdn.com/gn_img/albums/koMWQBbqLE/MWQ4AyMM3q/size_m_1719391918.jpg"
+                alt="charts"
+              />
+              <span class="play_icon">
+                <i class="fa-solid fa-play"></i>
+              </span>
+            </div>
+            <span class="title">Khudaya (From "Sarfira")</span>
+          </div>
+          <div class="wrapper">
+            <div class="play_content">
+              <img
+                src="https://a10.gaanacdn.com/gn_img/albums/jBr3gybR1m/r3gerl49bR/size_m_1719911865.jpg"
+                alt="charts"
+              />
+              <span class="play_icon">
+                <i class="fa-solid fa-play"></i>
+              </span>
+            </div>
+            <span class="title">Tauba Tauba (From "Bad Newz")</span>
+          </div>
+          <div class="wrapper">
+            <div class="play_content">
+              <img src="https://a10.gaanacdn.com/gn_pl_img/playlists/zLp36v3rGe/Lp36kP5NWr/size_m_1720422436.webp" alt="charts">
+              <span class="play_icon">
+               <i class="fa-solid fa-play"></i>
+              </span>
+            </div>
+             <span class="title">Hindi Romance Top</span>
+      </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- //🌐 Trending Songs (Custom Play)  -->
+    <section class="custom_play container">
+      <div class="row">
+        <div class="heading">
+          <h2>Mid Year Star 2024</h2>
+          <a href="#">See All</a>
+        </div>
+        <div class="main_content">
+          <div class="wrapper">
+            <div class="play_content">
+              <img
+                src="https://a10.gaanacdn.com/gn_pl_img/playlists/zLp36v3rGe/Lp36mQk0Kr/size_m_1720598734.webp"
+                alt="charts"
+              />
+              <span class="play_icon">
+                <i class="fa-solid fa-play"></i>
+              </span>
+            </div>
+            <span class="title">Best Of Arijit Singh</span>
+          </div>
+          <div class="wrapper">
+            <div class="play_content">
+              <img
+                src="https://a10.gaanacdn.com/gn_pl_img/playlists/XYybzrb2gz/ybzzGEQ8b2/size_m_1720534281.webp"
+                alt="charts"
+              />
+              <span class="play_icon">
+                <i class="fa-solid fa-play"></i>
+              </span>
+            </div>
+            <span class="title">Best of Sidhu Moose Wala</span>
+          </div>
+          <div class="wrapper">
+            <div class="play_content">
+              <img
+                src="https://a10.gaanacdn.com/gn_pl_img/playlists/qa4WEkqKP1/4WEgqZkxKP/size_m_1720683094.webp"
+                alt="charts"
+              />
+              <span class="play_icon">
+                <i class="fa-solid fa-play"></i>
+              </span>
+            </div>
+            <span class="title">Best Of Alan Walker</span>
+          </div>
+          <div class="wrapper">
+            <div class="play_content">
+              <img
+                src="https://a10.gaanacdn.com/gn_pl_img/playlists/D0PKLqr3Gl/PKLq5zXp3G/size_m_1720536104.webp"
+                alt="charts"
+              />
+              <span class="play_icon">
+                <i class="fa-solid fa-play"></i>
+              </span>
+            </div>
+            <span class="title">Featuring Diljit Dosanjh</span>
+          </div>
+          <div class="wrapper">
+            <div class="play_content">
+              <img
+                src="https://a10.gaanacdn.com/gn_pl_img/playlists/a7LWBzWzXA/LWBwqj2Dbz/size_m_1720683140.webp"
+                alt="charts"
+              />
+              <span class="play_icon">
+                <i class="fa-solid fa-play"></i>
+              </span>
+            </div>
+            <span class="title">Best Of The ChainSmokers</span>
+          </div>
+          <div class="wrapper">
+            <div class="play_content">
+              <img
+                src="https://a10.gaanacdn.com/gn_pl_img/playlists/R7vKXr6Wmr/vKXk0JzPbm/size_m_1720683461.webp"
+                alt="charts"
+              />
+              <span class="play_icon">
+                <i class="fa-solid fa-play"></i>
+              </span>
+            </div>
+            <span class="title">Best Of Dua Lipa</span>
+          </div>
+          <div class="wrapper">
+            <div class="play_content">
+              <img
+                src="https://a10.gaanacdn.com/gn_pl_img/playlists/zLp36v3rGe/Lp36mQk0Kr/size_m_1720598734.webp"
+                alt="charts"
+              />
+              <span class="play_icon">
+                <i class="fa-solid fa-play"></i>
+              </span>
+            </div>
+            <span class="title">Best Of Arijit Singh</span>
+          </div>
+          <div class="wrapper">
+            <div class="play_content">
+              <img
+                src="https://a10.gaanacdn.com/gn_pl_img/playlists/qa4WEkqKP1/4WEgqZkxKP/size_m_1720683094.webp"
+                alt="charts"
+              />
+              <span class="play_icon">
+                <i class="fa-solid fa-play"></i>
+              </span>
+            </div>
+            <span class="title">Best Of Alan Walker</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Slick Slider -->
+    <script
+      type="text/javascript"
+      src="//code.jquery.com/jquery-1.11.0.min.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="//code.jquery.com/jquery-migrate-1.2.1.min.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"
+    ></script>
+  </body>
+</html>

@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>carousel</title>
+    <style>
+        .carousel {
+  position: relative;
+  width: 800px; /* adjust the width to your liking */
+  height: 600px; /* adjust the height to your liking */
+  margin: 40px auto;
+  overflow: hidden;
+}
+
+.carousel-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.carousel-item {
+  position: relative;
+  display: none;
+  width: 100%;
+  height: 100%;
+}
+
+.carousel-item.active {
+  display: block;
+}
+
+.carousel-prev,.carousel-next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+}
+
+.carousel-prev {
+  left: 20px;
+}
+
+.carousel-next {
+  right: 20px;
+}
+    </style>
+</head>
+<body>
+    <div class="carousel">
+        <div class="carousel-inner">
+          <div class="carousel-item">
+            <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse1.mm.bing.net%2Fth%3Fid%3DOIP.2LLIb7-D5BLsKiiUHojgeAHaEc%26pid%3DApi&f=1&ipt=780a697d72135e6475d62018108c911f5dbd63f180d940308fa665fbf9a50efe&ipo=images" alt="Image 1">
+          </div>
+          <div class="carousel-item">
+            <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse2.mm.bing.net%2Fth%3Fid%3DOIP.sfhCq8XCnmtjiYWp8pa5JAAAAA%26pid%3DApi&f=1&ipt=ab5b6ffa3d853ba09506ea76e55702aefff7582d44cb8d2ee4d37507bd8a8408&ipo=images" alt="Image 2">
+          </div>
+          <div class="carousel-item">
+            <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse3.mm.bing.net%2Fth%3Fid%3DOIP.GsKicQ687o4eUvqZ_leKLAHaD4%26pid%3DApi&f=1&ipt=a8e81f0d99682d92347f67e3dd4e5c8ad90383ef590bb6645b90a38c1d25568c&ipo=images" alt="Image 3">
+          </div>
+          <!-- Add more carousel items here -->
+        </div>
+        <button class="carousel-prev">Prev</button>
+        <button class="carousel-next">Next</button>
+      </div>
+
+      <script>
+        const carousel = document.querySelector('.carousel');
+const carouselInner = document.querySelector('.carousel-inner');
+const carouselItems = document.querySelectorAll('.carousel-item');
+const carouselPrev = document.querySelector('.carousel-prev');
+const carouselNext = document.querySelector('.carousel-next');
+
+let currentIndex = 0;
+
+carouselItems[currentIndex].classList.add('active');
+
+carouselPrev.addEventListener('click', () => {
+  currentIndex--;
+  if (currentIndex < 0) {
+    currentIndex = carouselItems.length - 1;
+  }
+  updateCarousel();
+});
+
+carouselNext.addEventListener('click', () => {
+  currentIndex++;
+  if (currentIndex >= carouselItems.length) {
+    currentIndex = 0;
+  }
+  updateCarousel();
+});
+
+function updateCarousel() {
+  carouselItems.forEach((item) => {
+    item.classList.remove('active');
+  });
+  carouselItems[currentIndex].classList.add('active');
+}
+
+// Automatic carousel slide
+setInterval(() => {
+  currentIndex++;
+  if (currentIndex >= carouselItems.length) {
+    currentIndex = 0;
+  }
+  updateCarousel();
+}, 5000); // adjust the interval time to your liking
+      </script>
+</body>
+</html>
