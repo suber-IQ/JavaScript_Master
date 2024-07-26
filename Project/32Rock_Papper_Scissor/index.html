@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rock-Papper-Scissor</title>
+
+
+    <style>
+ body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f0f0f0;
+}
+
+.container {
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 300px;
+}
+
+.heading h3 {
+    margin: 0 0 20px;
+}
+
+.score-board {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.score h4 {
+    margin: 0;
+}
+
+.choices {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.choice {
+    padding: 10px 20px;
+    border: none;
+    background-color: #007bff;
+    color: #fff;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.choice:hover {
+    background-color: #0056b3;
+}
+
+.result h4 {
+    margin: 0;
+    font-size: 1.2rem;
+    color: #333;
+}
+
+.rounds h4 {
+    margin: 10px 0 0;
+    font-size: 1.1rem;
+    color: #333;
+}
+
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="heading">
+        <h3>Rock, Paper, Scissors</h3>
+      </div>
+      <div class="score-board">
+        <div class="score">
+          <h4>Your Score: <span id="user-score">0</span></h4>
+        </div>
+        <div class="score">
+          <h4>Computer Score: <span id="computer-score">0</span></h4>
+        </div>
+      </div>
+      <div class="choices">
+        <button class="choice" id="rock">Rock ✊</button>
+        <button class="choice" id="paper">Paper 🖐️</button>
+        <button class="choice" id="scissors">Scissors ✌️</button>
+      </div>
+      <div class="result">
+        <h4 id="result-message">Make your move!</h4>
+      </div>
+      <div class="rounds">
+        <h4>Rounds Left: <span id="rounds-left">3</span></h4>
+      </div>
+    </div>
+
+    <script>
+     const userScoreElement = document.getElementById("user-score");
+const computerScoreElement = document.getElementById("computer-score");
+const resultMessageElement = document.getElementById("result-message");
+const roundsLeftElement = document.getElementById("rounds-left");
+const choices = document.querySelectorAll(".choice");
+
+let userScore = 0;
+let computerScore = 0;
+let roundsLeft = 3;
+
+choices.forEach(choice => {
+    choice.addEventListener("click", () => {
+        if (roundsLeft > 0) {
+            playGame(choice.id);
+        }
+    });
+});
+
+function playGame(userChoice) {
+    const computerChoice = getComputerChoice();
+    const result = getResult(userChoice, computerChoice);
+
+    switch(result) {
+        case 'win':
+            userScore++;
+            resultMessageElement.innerText = `You win! ${capitalize(userChoice)} beats ${computerChoice}.`;
+            break;
+        case 'lose':
+            computerScore++;
+            resultMessageElement.innerText = `You lose! ${capitalize(computerChoice)} beats ${userChoice}.`;
+            break;
+        case 'draw':
+            resultMessageElement.innerText = `It's a draw! You both chose ${userChoice}.`;
+            break;
+    }
+
+    userScoreElement.innerText = userScore;
+    computerScoreElement.innerText = computerScore;
+    roundsLeft--;
+    roundsLeftElement.innerText = roundsLeft;
+
+    if (roundsLeft === 0) {
+        endGame();
+    }
+}
+
+function getComputerChoice() {
+    const choices = ["rock", "paper", "scissors"];
+    const randomIndex = Math.floor(Math.random() * choices.length);
+    return choices[randomIndex];
+}
+
+function getResult(userChoice, computerChoice) {
+    if (userChoice === computerChoice) {
+        return 'draw';
+    }
+
+    if ((userChoice === "rock" && computerChoice === "scissors") ||
+        (userChoice === "paper" && computerChoice === "rock") ||
+        (userChoice === "scissors" && computerChoice === "paper")) {
+        return 'win';
+    } else {
+        return 'lose';
+    }
+}
+
+function capitalize(word) {
+    return word.charAt(0).toUpperCase() + word.slice(1);
+}
+
+function endGame() {
+    resultMessageElement.innerText += ` Game over! Final Score - You: ${userScore}, Computer: ${computerScore}`;
+    choices.forEach(choice => {
+        choice.disabled = true;
+    });
+}
+
+    </script>
+  </body>
+</html>
