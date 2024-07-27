@@ -1,0 +1,35 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    background-color: antiquewhite;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+.carousel {
+    width: 80%;
+    overflow: hidden;
+    border: 2px solid black;
+}
+.carousel-images {
+    display: flex;
+    width: 100%;
+    animation: slide 15s infinite;
+}
+.carousel img {
+    width: 100%;
+    flex: 0 0 100%;
+    object-fit: cover;
+}
+@keyframes slide {
+    0% { transform: translateX(0); }
+    20% { transform: translateX(-100%); }
+    40% { transform: translateX(-200%); }
+    60% { transform: translateX(-300%); }
+    80% { transform: translateX(-400%); }
+    100% { transform: translateX(0); }
+}
