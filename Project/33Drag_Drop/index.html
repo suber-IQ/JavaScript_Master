@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Drag & Drop Project</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+            background-color: antiquewhite;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .container{
+            display: flex;
+            width: 800px;
+        }
+        .empty{
+            width: 150px;
+            height: 150px;
+            border: 2px solid black;
+            background-color: #fff;
+            margin: 10px;
+
+        }
+        .img-box{
+            background-image: url("https://picsum.photos/seed/picsum/200/300");
+            width: 150px;
+            height: 150px;
+            background-size: cover;
+            cursor: pointer;
+        }
+        .hold{
+            border: 2px dashed blueviolet;
+        }
+        .hovered{
+            background-color: lightblue;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="empty"></div>
+        <div class="empty"></div>
+        <div class="empty"></div>
+        <div class="empty"></div>
+    </div>
+
+    <div class="img-box" draggable="true"></div>
+
+    <script>
+        const empties = document.querySelectorAll(".empty");
+        const box = document.querySelector(".img-box");
+
+        box.addEventListener("dragstart", dragStart);
+        box.addEventListener("dragend", dragEnd);
+
+        function dragStart() {
+            this.classList.add("hold");
+        }
+
+        function dragEnd() {
+            this.classList.remove("hold");
+        }
+
+        empties.forEach(empty => {
+            empty.addEventListener("dragenter", dragEnter);
+            empty.addEventListener("dragover", dragOver);
+            empty.addEventListener("dragleave", dragLeave);
+            empty.addEventListener("drop", dragDrop);
+        });
+
+        function dragOver(e) {
+            // console.log("drapOver");
+            e.preventDefault();
+        }
+
+        function dragEnter(e) {
+            // console.log("drapEnter");
+
+            e.preventDefault();
+            this.classList.add("hovered");
+        }
+
+        function dragLeave() {
+            // console.log("drapLeave");
+            this.classList.remove("hovered");
+        }
+
+        function dragDrop() {
+            // console.log("drapDrop");
+
+            this.classList.remove("hovered");
+            this.appendChild(box);
+        }
+    </script>
+</body>
+</html>
