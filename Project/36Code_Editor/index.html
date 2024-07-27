@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Live Code Editor</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <div class="editorContainer">
+        <div class="wrapper">
+             <div class="title">
+                <div class="main-title">
+                    <h2>HTML</h2>
+                </div>
+             </div>
+             <textarea name="html" id="html" cols="auto" rows="auto" autocomplete="off" autocapitalize="off" autocorrect="off"
+             spellcheck="false"
+             ></textarea>
+             <button class="clear html">Clear</button>
+             <button class="copy-btn copy-html"><span>📄 Copy HTML</span></button>
+        </div>
+        <div class="wrapper">
+             <div class="title">
+                <div class="main-title">
+                    <h2>Css</h2>
+                </div>
+             </div>
+             <textarea name="css" id="css" cols="auto" rows="auto" autocomplete="off" autocapitalize="off" autocorrect="off"
+             spellcheck="false"
+             ></textarea>
+             <button class="clear css">Clear</button>
+             <button class="copy-btn copy-css"><span>📄 Copy CSS</span></button>
+        </div>
+        <div class="wrapper">
+             <div class="title">
+                <div class="main-title">
+                    <h2>JS</h2>
+                </div>
+             </div>
+             <textarea name="js" id="js" cols="auto" rows="auto" autocomplete="off" autocapitalize="off" autocorrect="off"
+             spellcheck="false"
+             ></textarea>
+             <button class="clear js">Clear</button>
+             <button class="copy-btn copy-js"><span>📄 Copy JS</span></button>
+        </div>
+    </div>
+    <div class="outputContainer">
+        <iframe id="output" title="output" frameborder="0" width="100%" height="100%"></iframe>
+    </div>
+
+</body>
+</html>
